@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--<link rel="stylesheet" type="text/css" href="stylesheets/TableCSS.css" media="screen">-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/Search.css" media="screen">
 
     <title>Eliot's Blog</title>
   </head>
@@ -23,8 +23,15 @@
       <li>Class</li>
       <li><a href = "/Blog/AboutMe.html">About</a></li>
     </ul>
+    <!--SearchBox-->
+    <div id = "search_box" style = "left:300px">
+      <form id="search_form" method="post" action="#"> 
+      <input type="text" id="s" value="Search" class="swap_value" /> 
+      <input type="image" src="http://files.jb51.net/demoimg/200912/btn_search_box.gif" width="27" height="24" id="go" alt="Search" title="Search" /> 
+      </form>
+    </div>
     <!--BlogTable-->
-    <div style="position:absolute;width:1000px;height:200px;top:130px;left:150px">
+    <div style="position:absolute;width:950px;height:200px;top:130px;left:150px">
       <table class="mytable" cellspacing="0" summary="BlogTable" border = "2">
       <tr>
         <th scope="col">Article Name</th>
