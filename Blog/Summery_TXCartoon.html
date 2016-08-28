@@ -32,8 +32,8 @@
   大体思路就是MFC作为框架显示GUI，Python脚本就做为核心爬取TX漫画了，
   于是抱着这个思路，就稀里糊涂的把TX漫画当作静态页面去爬了，结果显然，
   啥都没有，这才一拍脑门，TX漫画应该是JS动态调用生成的，于是去Google了
-  Python爬取动态页面的资料，最终选定了一种方案<font color = "blue">【selenium WebDriver】</font>。
-  <h3>selenium WebDriver</h3>
+  Python爬取动态页面的资料，最终选定了一种方案<font style = "font-weight:bold;color:#006400">【selenium WebDriver】</font>。
+  <font style = "font-size:5px">selenium WebDriver<font>
   大概说一下WebDriver，正如其名，这个插件驱动浏览器(IE、FireFox、Chrom。。。)来加载动态页面，然后返回我们所需要的一系列信息，简单方便。
   <hr>
   选定方案之后就去实战，爬取漫画列表，章节信息的还很顺利，等到爬取漫画图片链接的时候就出了问题，一个很Strange的问题！
