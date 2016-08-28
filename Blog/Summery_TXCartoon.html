@@ -20,7 +20,13 @@
       <p>
         <pre>
           前阵子用C++联动Python来爬腾讯漫画，遇到不少麻烦，正因如此也学会了很多知识和技巧，现在抽空总结一下:
-          ①：C++联动Python(我这里Python2.3)
+          毕竟Python爬虫必备，C++联动Python会省不少力气
+          ①：环境配置
+            我这里用的是Python2.7(推荐Python2，而非Python3)，首先在VS项目【VC++目录 -> 包含目录】包含Python的include文件夹，
+            然后【VC++目录 -> 库目录】包含Python的lib文件夹，【链接器 -> 输入 -> 附加依赖项】添加python27_d.dll(视你的版本号而定)。
+            如果不存在python27_d.dll，复制python27.dll创建，修改Python的include目录下的pyconfig.h，将#define Py_DEBUG注释掉。
+            至此，环境就已经配置好了。
+          ②：C++调用Python
             
         </pre>
       </p>
