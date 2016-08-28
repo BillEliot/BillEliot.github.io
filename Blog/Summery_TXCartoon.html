@@ -27,6 +27,12 @@
             如果不存在python27_d.dll，复制python27.dll创建，修改Python的include目录下的pyconfig.h，将#define Py_DEBUG注释掉。
             至此，环境就已经配置好了。
           ②：C++调用Python
+            在讲解C++调用Python之前，我先说一下我的爬虫思路以及遇到的几个问题：
+            大体思路就是MFC作为框架显示GUI，Python脚本就做为核心爬取TX漫画了，
+            于是抱着这个思路，就稀里糊涂的把TX漫画当作静态页面去爬了，结果显然，
+            啥都没有，这才一拍脑门，TX漫画应该是JS动态调用生成的，于是去Google了
+            Python爬取动态页面的资料，最终选定了一种方案【selenium WebDriver】。
+            
             
         </pre>
       </p>
