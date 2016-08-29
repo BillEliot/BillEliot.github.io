@@ -109,7 +109,7 @@
 	  //获取漫画排行榜
 	  CString strRank;
 	  //pIns 实例化的类;GetText WEB中函数名;sss 类型标识符(字符串s,int i等);爬取页面;正则表达式;保存文件名
-	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","\<a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");
+	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","&lt;a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");
   <hr>
         </pre>
       </p>
