@@ -14,8 +14,9 @@
     <!--List显示/隐藏-->
     <script type = "text/javascript">
     $(document).ready(function(){
-      $("#ClassList").click(function(){
-        $("this").hide(1000);
+      $("#ClassList ul li").next("ul").hide();
+      $("#ClassList ul li").click(function(){
+        $("this").next("ul").hide();
       });
     });
     </script>
@@ -29,17 +30,17 @@
       <div class="container"><h1>Welcome to Eliot's Blog!</h1></div>
     </header>
     <!--List-->
+    <div id = "ClassList">
     <ul>
       <li>Home</li>
-      <li><a href = "#">Class</a></li>
-      <div id = "ClassList">
+      <li><a href = "">Class</a></li>
         <ul>
           <li>NOIP算法</li>
           <li>原创</li>
         </ul>
-      </div>
       <li><a href = "/Blog/AboutMe.html">About</a></li>
     </ul>
+    </div>
     <!--SearchBox-->
     <div id = "search_box" style = "position:absolute;left:1150px;top:130px">
       <form id = "search_form" method = "post" action = "#">
