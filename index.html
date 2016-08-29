@@ -16,7 +16,7 @@
     $(document).ready(function(){
       $("#ClassList ul li").next("ul").hide();
       $("#ClassList ul li").click(function(){
-        $("this").next("ul").hide();
+        $("this").next("ul").toggle();
       });
     });
     </script>
@@ -33,7 +33,7 @@
     <div id = "ClassList">
     <ul>
       <li>Home</li>
-      <li><a href = "">Class</a></li>
+      <li><a href = "#">Class</a></li>
         <ul>
           <li>NOIP算法</li>
           <li>原创</li>
