@@ -7,7 +7,16 @@
     <link rel = "stylesheet" type = "text/css" href = "/stylesheets/stylesheet.css" media = "screen">
     <link rel = "stylesheet" type = "text/css" href = "/stylesheets/github-dark.css" media = "screen">
     <link rel = "stylesheet" type = "text/css" href = "/stylesheets/print.css" media = "print">
-    
+    <!--JQuery-->
+    <script src = "/javascripts/jquery-3.1.0.min.js"></script>
+    <!--List Show/Hide-->
+    <script type = "text/javascript">
+    	$(document).ready(function(){
+    		$("#List ul li").click(function(){
+    			$(this).next("ul").toggle(600);
+    		});
+    	});
+    </script>
     <title>Doc_NoipAlgo</title>
   </head>
   <!--Main-->
@@ -25,44 +34,46 @@
           Class:NOIP_Algo : <a href = "">点击下载</a>
           <hr>
           主类：CNOIP_ALGO
+          	<div id = "List">
             CNOIP_ALGO派生类:<ul><li><a href = "#">CHighPrecision</a></li><li><a href = "#">CMathTheory</a></li><li><a href = "#">CGraphTheory</a></li><li><a href = "#">CDataStruct</a></li><ul><li><a href = "#">CDisjointSet</a></li><li><a href = "#">CTreeArray</a></li><li><a href = "#">SegmentTree</a></li></ul><li><a href = "#">CBinaryConver</a></li></ul>
+          	</div>
           <hr>
           <h2>CHighPrecision</h2>
           Function:
             string HighAdd(string strA,string strB); 高精度加法
-  	    string HighDec(string strA,string strB); 高精度减法
-	    string HighMul(string strA,string strB); 高精度乘法
+		  	    string HighDec(string strA,string strB); 高精度减法
+	    			string HighMul(string strA,string strB); 高精度乘法
           <hr>
           <h2>CMathTheory</h2>
           Function:
             bool IsPrime(int nNum);                  素数判定
-	    int* PrimeSieve(int MaxNum = 1000);      素数筛法
-	    int QuickMod(int m,int n,int nMod);      快速幂
-	    int GetFactorial(int nNum);              求阶乘
-	    int A(int a,int b);                      排列
-	    int C(int a,int b);                      组合
+	    			int* PrimeSieve(int MaxNum = 1000);      素数筛法
+				    int QuickMod(int m,int n,int nMod);      快速幂
+				    int GetFactorial(int nNum);              求阶乘
+				    int A(int a,int b);                      排列
+				    int C(int a,int b);                      组合
           <hr>
           <h2>CGraphTheory</h2>
           Function:
             int* SPFA(int nStart);                   SPFA
-	    int* Dijkstra(int nStart);               迪杰斯特拉
-	    int Kruskal(KRUSKAL* pS_Kruskal,int nMax_Line);   克鲁斯卡尔
+				    int* Dijkstra(int nStart);               迪杰斯特拉
+				    int Kruskal(KRUSKAL* pS_Kruskal,int nMax_Line);   克鲁斯卡尔
           <hr>
           <h2>CDisjointSet</h2>
           Function:
             void Init();                             初始化
-	    int Find(int nPos);                      查找父亲
-	    void Union(int nFather_A,int nFather_B); 合并集合
+				    int Find(int nPos);                      查找父亲
+				    void Union(int nFather_A,int nFather_B); 合并集合
           <hr>
           <h2>CTreeArray</h2>
             int Lowbit(int N);                       Lowbit
-	    void Add(int nPos,int nOffset);          加偏移量
-	    int Sum(int N);                          求区间和
+				    void Add(int nPos,int nOffset);          加偏移量
+				    int Sum(int N);                          求区间和
           <hr>
           <h2>CBinaryConversion</h2>
             int BinaryToTen(string strNum,int nCur_Binary);   任意进制转10进制
-	    string TenToBinary(int nNum,int nTo_Binary);      10进制转任意进制
-	    string BinaryToBinary(string strNum,int nCur_Binary,int nTo_Binary); 任意进制转任意进制
+				    string TenToBinary(int nNum,int nTo_Binary);      10进制转任意进制
+				    string BinaryToBinary(string strNum,int nCur_Binary,int nTo_Binary); 任意进制转任意进制
           <hr>
         </pre>
       </p>
