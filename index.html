@@ -11,6 +11,14 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/Search.css" media="screen">
     <!--JQuery-->
     <script src = "/javascripts/jquery-3.1.0.min.js"></script>
+    <!--List显示/隐藏-->
+    <script type = "text/javascript">
+    $(document).ready(function(){
+      $("#ClassList").click(function(){
+        $("#ClasList").hide(1000);
+      });
+    });
+    </script>
     
     <title>Eliot's Blog</title>
   </head>
@@ -23,7 +31,7 @@
     <!--List-->
     <ul>
       <li>Home</li>
-      <li>Class</li>
+      <li id = "ClassList">Class</li>
         <ul>
           <li>NOIP算法</li>
           <li>原创</li>
