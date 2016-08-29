@@ -51,14 +51,18 @@
     #coding=utf-8
     import urllib
     import re
+    #引用WebDriver
     from selenium import webdriver
     import time
     
+    #定义WEB类
     class WEB:
+        #获取静态HTML页
         def GetHtml(self,strURL):
             URL = urllib.urlopen(strURL)
             Html = URL.read()
             return Html
+        #静态HTML中爬取数据
         def GetText(self,strURL,reg,FileName):
             S = ""
             Creg = re.compile(reg)
@@ -68,16 +72,23 @@
             File = open("C:/" + FileName,"w")
             File.write(S)
             File.close()
+        #动态获取腾讯漫画
         def GetPicture(self,reg,strURL,BroFile):
+            #调用隐式浏览器(需下载phantomjs.exe)
             #driver = webdriver.PhantomJS(executable_path=BroFile)
             #driver.get(strURL)
+            #调用IE浏览器(需下载IEDriverServer.exe)
             driver = webdriver.Ie()
             driver.get(strURL)
+            #滚动滚轮使漫画加载出来
             for nWidth in range(0,22000,800):
                 js = "var q=document.documentElement.scrollTop=" + str(nWidth)
                 driver.execute_script(js)
+            #等待1秒
             time.sleep(1)
+            #获取HTML页面
             HTML = driver.page_source.encode('utf-8','ignore')
+            #爬取并下载
             Creg = re.compile(reg)
             PictureLinkList = re.findall(Creg,HTML)
             nIndex = 0
@@ -88,7 +99,18 @@
             driver.quit()
   <hr>
   C++调用Python脚本:
-  
+  <hr>
+  #获取Python脚本中的WEB类
+  pMod = PyImport_ImportModule("Web");
+	pDict = PyModule_GetDict(pMod);
+	pClass = PyDict_GetItemString(pDict,"WEB");
+	pIns = PyInstance_New(pClass,NULL,NULL);
+	//调用GetText实例
+	  //获取漫画排行榜
+	  CString strRank;
+	  //pIns 实例化的类;GetText WEB中函数名;sss 类型标识符(字符串s,int i等);爬取页面;正则表达式;保存文件名
+	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","<a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");
+  <hr>
         </pre>
       </p>
     </div>
