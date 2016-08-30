@@ -1,32 +1,21 @@
-# About
+# Jekyll template
+Beautiful responsive portfolio style template for designers and web developers
 
-This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
+[![Gitter](https://badges.gitter.im/nikrich/jekyll-slender-template.svg)](https://gitter.im/nikrich/jekyll-slender-template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Twitter](https://img.shields.io/badge/Twitter-@slender_rich-blue.svg?style=flat)](https://twitter.com/slender_rich)
 
-You can visit [here](http://gaohaoyang.github.io) to see this blog.
+![preview](http://i.imgur.com/9Nz6Ib9.jpg)
 
----
+## Demo
+Find a demo [here](http://nikrich.github.io/jekyll-slender-template/#)
 
-这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
+## Contributing
 
-博客访问地址：[点击这里](http://gaohaoyang.github.io)
-
-**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
-
-<!--
-
-## 被引用信息
-
-使用了我的模板并写明来源的人：   
-
-* [dreamholy](http://dreamholy.github.io/)
-
-没有注明来源的人：
-
-* [yangshuailing](http://yangshuailing.github.io/com/)
-* [huapu728](http://huapu728.github.io/)
-* [greatbuger](http://greatbuger.github.io/) 
+1. Clone the repo
+2. Checkout the dev branch ( Do not work directly on master )
+3. Use ```jekyll serve``` to run the project
+4. Make your changes and test
+5. Submit a pull request
 
 
--->
-
-
+Inspired by [Balraj Chana](https://dribbble.com/shots/2380700-New-Portfolio-Site-Live)

@@ -13,14 +13,16 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
+body {    
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }
 
 
@@ -32,9 +34,15 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;    
 }
 
+/**
+ * Set header attributes
+ */
+.site-header{
+    text-transform: uppercase;
+}
 
 
 /**
@@ -80,25 +88,22 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $text-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($text-color, 15%);
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: $text-color;        
     }
 }
 
@@ -128,9 +133,9 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid lighten($glass-color, 10%);
     border-radius: 3px;
-    background-color: #eef;
+    background-color: $glass-color;
 }
 
 code {
@@ -139,7 +144,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     > code {
         border: 0;
