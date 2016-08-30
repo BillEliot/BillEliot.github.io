@@ -1,9 +1,38 @@
+<<<<<<< HEAD
 name: Solar Theme
 url: http://example.org
 description: A stylish blog using the Solarized color palette
 
 permalink: /:year/:month/:day/:title/
 paginate: 10
+=======
+title:            WELCOME
+description:      Eliot's Blog
+disqus_shortname: 
+reading_time:     true
+words_per_minute: 200
+# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:
+
+# Owner/author information
+owner:
+  name:           Eliot
+  avatar:         avatar.jpg
+  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
+  email:          1161142536@qq.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:
+>>>>>>> origin/master
 
 gems: [jekyll-paginate]
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
