@@ -34,7 +34,7 @@ image:
 ### ③：代码概要
   初始化Python解释器:Py_Initialize()
   释放Python解释器:Py_Finalize()
-  ```Python
+  ```ruby
   Python代码:
     #coding=utf-8
     import urllib
@@ -87,7 +87,7 @@ image:
             driver.quit()
   ```
   C++调用Python脚本:
-  ```C++
+  
   //获取Python脚本中的WEB类
   pMod = PyImport_ImportModule("Web");
 	pDict = PyModule_GetDict(pMod);
@@ -122,4 +122,3 @@ image:
 	free(pWideChar);
 	return true;
   }
-  ```
