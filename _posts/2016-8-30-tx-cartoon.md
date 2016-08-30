@@ -37,7 +37,7 @@ icon: icon-python
   释放Python解释器:Py_Finalize()
   
   Python代码:  
-``` python  
+```python  
     #coding=utf-8  
     import urllib  
     import re  
