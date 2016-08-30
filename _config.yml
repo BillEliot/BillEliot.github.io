@@ -63,8 +63,8 @@ index:
   python: 'Python'
   linux: 'Linux'
   html: 'HTML'
-  database: 'Database'
-  mac: 'Mac'
+  C++: 'C/C++'
+  mac: 'Unity3D'
   life: 'Life'
 
 # donate
