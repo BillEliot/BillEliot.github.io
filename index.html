@@ -1,61 +1,42 @@
 ---
-layout: default
+layout: post-index
+title: Latest Posts
+description: "Describe this nonsense."
+tags: [Jekyll, theme, themes, responsive, blog, modern]
+comments: false
+image:
+  feature: abstract-1.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-<div class="home">
-  
-  
- <div class="col col-12">
-      <div class="col col-3">
-          <div class="block glass"  style="background-image:url(assets/avatar.jpg)">      
-          </div>
-      </div>
-      <div class="col col-9">
-        <div class="block glass">
-            <div class="block-body">
-                <h2>Yo, I'm Dude Labouwski</h2>
-                <p class="grey-text">Aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores ausLorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus</p>
-            </div>
-        </div>
-      </div>  
-  </div>
-  <div class="col col-12">
-    {% for port in site.data.portfolio %}
-      <div class="col col-{{port.width}}">
-        <div class="block" style="background-image:url(assets/{{port.img}})">
-            <div class="block-body height-{{port.height}}">              
-                <h2 class="align-bottom-right">
-                  {{ port.title }}
-                </h2>
-            </div>
-        </div>
-      </div>
-    {% endfor %}
-    </div>
-  <div class="col col-9">
-    {% for post in site.posts %}
-      <div class="col col-{{post.width}}">
-        <div class="block {{post.color}}">
-            <div class="block-body height-{{post.height}}">
-                <span class="post-meta white-text">{{ post.date | date: "%b %-d, %Y" }}</span>
+{% for post in paginator.posts %}
+<article class="hentry">
+  <header>
+    {% if post.image.feature %}
+      <div class="entry-image-index">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+      </div><!-- /.entry-image -->
+    {% endif %}
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
+      {% if site.reading_time %}
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        {% include read-time-index.html %}
+      </span><!-- /.entry-reading-time -->
+      {% endif %}
+    </div><!-- /.entry-meta -->
+    {% if post.link %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+    {% else %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+    {% endif %}
+  </header>
+  <div class="entry-content">
+    {{ post.content }}
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+{% endfor %}
 
-                <h2>
-                  <a class="post-link white-text" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-            </div>
-        </div>
-      </div>
-    {% endfor %}
-    </div>
-    <div class="col col-3">
-        <div class="block glass">
-            <div class="block-body">
-                <h3 class="margin-bot">Skills</h3>                
-                {% for skill in site.data.skills %}
-                <span class="post-meta white-text">{{skill.descr}}</span>
-                <div class="progress margin-bot"><div class="progress-{{skill.xp}}"></div></div>                
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
+{% include pagination.html %}
