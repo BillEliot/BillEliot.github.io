@@ -32,7 +32,7 @@ image:
   就可以把图片链接全部爬取出来了！
   
 ### ③：代码概要
-  初始化Python解释器:Py_Initialize()
+  初始化Python解释器:Py_Initialize()  
   释放Python解释器:Py_Finalize()
   ```ruby
   Python代码:
@@ -97,7 +97,7 @@ image:
 	  //获取漫画排行榜
 	  CString strRank;
 	  //pIns 实例化的类;GetText WEB中函数名;sss 类型标识符(字符串s,int i等);爬取页面;正则表达式;保存文件名
-	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","&lt;a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");
+	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","<a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");
   
   这就使用WebDriver动态的获取了HTML页，但是Python保存文件的时候默认编码格式是UTF-8，Unicode下CFile直接读取会乱码，所以需要转码。
       BOOL CTXCartoonDlg::ReadUTF8StringFile(CString Path, CString& str){
