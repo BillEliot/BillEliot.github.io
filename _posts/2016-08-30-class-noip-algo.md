@@ -10,7 +10,6 @@ categories: [Database]
 参加竞赛的时候，将NOIP主要的算法做了一个总结，便有了现在的Class:NOIP_Algo，因为特殊性，类中大部分函数需要重载，  
 本类只提供参考，如果大家发现错误的话也希望和我联系。
 
-```
 主类：CNOIP_ALGO
     CNOIP_ALGO派生类:
     <ul>
@@ -25,7 +24,6 @@ categories: [Database]
       </ul>
     <li>CBinaryConver</li>
     </ul>
-```
 
 ### CHighPrecision
 
