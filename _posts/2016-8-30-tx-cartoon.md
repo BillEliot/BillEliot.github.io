@@ -38,5 +38,13 @@ icon: icon-python
   
   Python代码:  
 ```python
-def AAAA()
+import urllib
+import re
+#引用WebDriver
+from selenium import webdriver
+import time
+
+#定义WEB类
+class WEB:
+  
 ```
