@@ -1,87 +1,64 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/Search.css">
-    <!--<link rel="stylesheet" type="text/css" href="stylesheets/MyCSS.css">-->
-    <!--JQuery-->
-    <script src = "/javascripts/jquery-3.1.0.min.js"></script>
-    <!--JS-->
-    <script type = "text/javascript" src="/javascripts/MyJavaScripts.js"></script>
-    
-    <title>Eliot's Blog</title>
-  </head>
-  <!----------------------------------------------------------------------------------------->
-  <body>
-    <!--Header-->
-    <header>
-      <div class="container"><h1>Welcome to Eliot's Blog!</h1></div>
-    </header>
-    <!--List-->
-    <div id = "ClassList">
-      <ul>
-        <li>Home</li>
-        <li><a href = "#">Class</a></li>
-          <ul>
-            <li>NOIP算法</li>
-            <li>原创文章</li>
-            <li>原创作品</li>
-          </ul>
-        <li><a href = "/Blog/AboutMe.html">About</a></li>
-      </ul>
+---
+layout: default
+---
+<div id="index" class="row">
+  <div class="col-sm-9">
+    <div class="post-area">
+      <!-- small button -->
+     <!--  <p class="pull-right visible-xs">
+       <button>toggle</button>
+     </p> -->
+      <div class="post-list-header">
+        Posts
+      </div>
+      <div class="post-list-body">
+        
+        <div class="all-posts" post-cate="All">
+          {% for post in site.posts %}
+            <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
+              <h2>
+              {{ post.title }}
+              </h2>
+              <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </a>
+          {% endfor %}
+        </div>
+        <!-- <div class="posts-in-categories"> -->
+        {% for category in site.categories %}
+          <div post-cate="{{category | first}}">
+            {% for posts in category  %}
+              {% for post in posts %}
+                {% if post.url %}
+                  <a href="{{ post.url }}" class="post-list-item">
+                    <h2>
+                    {{ post.title }}
+                    </h2>
+                    <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+        
+        <!-- </div> -->
+      </div>
     </div>
-    <!--SearchBox-->
-    <div id = "search_box" style = "position:absolute;left:1150px;top:130px">
-      <form id = "search_form" method = "post" action = "#">
-      <input type = "text" id = "s" value = "百度一下" class = "swap_value"/> 
-      <input type = "image" src = "http://files.jb51.net/demoimg/200912/btn_search_box.gif" width="27" height="24" id = "go" alt="Search" title="Search"/> 
-      </form>
+  </div>
+  <div class="col-sm-3">
+    <div class="shadow-corner-curl hidden-xs">
+      <div class="categories-list-header">
+        Categories
+      </div>
+      
+      <a href="javascript:;" class="categories-list-item" cate="All">
+        All<span class="my-badge"> {{site.categories | size}}</span>
+      </a>
+      {% for category in site.categories %}
+        <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+          {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
+        </a>
+      {% endfor %}
     </div>
-    <!--UpdateBox-->
-    <!--MainMenu-->
-    <!--
-    <div style = "position:absolute;top:0px;left:1000px;">
-      <nav>
-        <ul class = "dropdown">
-          <li class = "drop"><a hre = "#">首页</a></li>
-        </ul>
-      </nav>
-    </div>
-    -->
-    <!--BlogTable-->
-    <div style="position:absolute;width:950px;height:200px;top:130px;left:170px">
-      <table class="mytable" cellspacing="0" summary="BlogTable" border = "2">
-      <tr>
-        <th scope="col">Article Name</th>
-        <th scope="col">Date</th>
-        <th scope="col">Class</th>
-      </tr>
-      <tr>
-        <td class="row"><a href="/Blog/C++Artifice.html">C++技巧总结</a></td>
-        <td class="row">2016.8.28</td>
-        <td class="row">原创文章</td>
-      </tr>
-      <tr>
-        <td class="row"><a href="/Blog/Summery_TXCartoon.html">爬虫腾讯漫画</td>
-        <td class="row">2016.8.28</td>
-        <td class="row">原创文章</td>
-      </tr>
-      <tr>
-        <td class="row"><a href = "/Blog/SegmentTree.html">线段树总结</a></a></td>
-        <td class="row">2016.8.28</td>
-        <td class="row">原创文章</td>
-      </tr>
-      <tr>
-        <td class="row"><a href = "/Blog/Doc_NoipAlgo.html">NOIP_Algo类文档</a></a></td>
-        <td class="row">2016.8.29</td>
-        <td class="row">NOIP算法</td>
-      </tr>
-      </table>
-    </div>
-  </body>
-</html>
+  </div>
+</div>
