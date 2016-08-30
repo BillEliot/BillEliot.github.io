@@ -36,7 +36,7 @@ icon: icon-python
   初始化Python解释器:Py_Initialize()  
   释放Python解释器:Py_Finalize()
   
-  Python代码:
+  Python代码:  
 ``` python
     #coding=utf-8
     import urllib
