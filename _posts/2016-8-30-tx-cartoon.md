@@ -23,7 +23,7 @@ icon: icon-python
   啥都没有，这才一拍脑门，TX漫画应该是JS动态调用生成的，于是去Google了
   Python爬取动态页面的资料，最终选定了一种方案【selenium WebDriver】。
   
-  ## selenium WebDriver
+## selenium WebDriver
   大概说一下WebDriver，正如其名，这个插件驱动浏览器(IE、FireFox、Chrom。。。)来加载动态页面，然后返回我们所需要的一系列信息，简单方便。
   
   选定方案之后就去实战，爬取漫画列表，章节信息的还很顺利，等到爬取漫画图片链接的时候就出了问题，一个很Strange的问题！
@@ -32,12 +32,12 @@ icon: icon-python
   突然灵光一现，我记得好像是只有滚轮滚到特定的漫画位置，漫画才会被加载出来，YES！就是这个原因，加载页面的时候加上滚轮滚动
   就可以把图片链接全部爬取出来了！
   
-  ### ③：代码概要
+### ③：代码概要
   初始化Python解释器:Py_Initialize()  
   释放Python解释器:Py_Finalize()
   
   Python代码:
-  ``` python
+``` python
     #coding=utf-8
     import urllib
     import re
@@ -87,4 +87,4 @@ icon: icon-python
                 urllib.urlretrieve(strLink,"C:/Picture/%s.jpg" % nIndex)
                 nIndex += 1
             driver.quit()  
-            ```
+```
