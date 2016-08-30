@@ -40,11 +40,4 @@ icon: icon-python
 ```python
 import urllib
 import re
-#引用WebDriver
-from selenium import webdriver
-import time
-
-#定义WEB类
-class WEB:
-  
 ```
