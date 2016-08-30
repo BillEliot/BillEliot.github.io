@@ -38,21 +38,53 @@ icon: icon-python
   
   
 ``` python
-#TTTTTTTTT
-class _const:
-    class ConstError(TypeError): pass
-    class ConstCaseError(ConstError): pass
-    
-    def __setattr__(self, name, value):
-        if self.__dict__.has_key(name):
-            raise self.ConstError, "Can't change const.%s" % name
-        if not name.isupper():
-            raise self.ConstCaseError, 'const name "%s" is not all uppercase' % name
-        self.__dict__[name] = value
-        
-import sys
-sys.modules[__name__]=_const()
-import const
-const.MY_NAME = 'JACK'
+import urllib  
+import re  
+#引用WebDriver  
+from selenium import webdriver  
+import time
+
+#定义WEB类  
+class WEB:  
+    #获取静态HTML页  
+    def GetHtml(self,strURL):  
+        URL = urllib.urlopen(strURL)  
+        Html = URL.read()  
+        return Html  
+        #静态HTML中爬取数据  
+        def GetText(self,strURL,reg,FileName):  
+            S = ""  
+            Creg = re.compile(reg)  
+            CartoonList = re.findall(Creg,self.GetHtml(strURL))  
+            for str in CartoonList:  
+                S += str + ";"  
+            File = open("C:/" + FileName,"w")  
+            File.write(S)  
+            File.close()  
+        #动态获取腾讯漫画
+        def GetPicture(self,reg,strURL,BroFile):  
+            #调用隐式浏览器(需下载phantomjs.exe)  
+            #driver = webdriver.PhantomJS(executable_path=BroFile)  
+            #driver.get(strURL)  
+            #调用IE浏览器(需下载IEDriverServer.exe)  
+            driver = webdriver.Ie()  
+            driver.get(strURL)  
+            #滚动滚轮使漫画加载出来  
+            for nWidth in range(0,22000,800):  
+                js = "var q=document.documentElement.scrollTop=" + str(nWidth)  
+                driver.execute_script(js)  
+            #等待1秒  
+            time.sleep(1)  
+            #获取HTML页面  
+            HTML = driver.page_source.encode('utf-8','ignore')  
+            #爬取并下载  
+            Creg = re.compile(reg)  
+            PictureLinkList = re.findall(Creg,HTML)  
+            nIndex = 0  
+            for strLink in PictureLinkList:  
+                strLink = strLink.replace("amp;","")  
+                urllib.urlretrieve(strLink,"C:/Picture/%s.jpg" % nIndex)  
+                nIndex += 1 
+            driver.quit()
 ...
 ```
