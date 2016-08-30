@@ -37,21 +37,21 @@ icon: icon-python
   释放Python解释器:Py_Finalize()
   
   Python代码:  
-``` python  
+    ```python
     import urllib  
     import re  
-    //引用WebDriver  
+    #引用WebDriver  
     from selenium import webdriver  
     import time  
     
-    //定义WEB类  
+    #定义WEB类  
     class WEB:  
-        //获取静态HTML页  
+        #获取静态HTML页  
         def GetHtml(self,strURL):  
             URL = urllib.urlopen(strURL)  
             Html = URL.read()  
             return Html  
-        //静态HTML中爬取数据  
+        #静态HTML中爬取数据  
         def GetText(self,strURL,reg,FileName):  
             S = ""  
             Creg = re.compile(reg)  
@@ -61,23 +61,23 @@ icon: icon-python
             File = open("C:/" + FileName,"w")  
             File.write(S)  
             File.close()  
-        //动态获取腾讯漫画
+        #动态获取腾讯漫画
         def GetPicture(self,reg,strURL,BroFile):  
-            //调用隐式浏览器(需下载phantomjs.exe)  
-            //driver = webdriver.PhantomJS(executable_path=BroFile)  
-            //driver.get(strURL)  
-            //调用IE浏览器(需下载IEDriverServer.exe)  
+            #调用隐式浏览器(需下载phantomjs.exe)  
+            #driver = webdriver.PhantomJS(executable_path=BroFile)  
+            #driver.get(strURL)  
+            #调用IE浏览器(需下载IEDriverServer.exe)  
             driver = webdriver.Ie()  
             driver.get(strURL)  
-            //滚动滚轮使漫画加载出来  
+            #滚动滚轮使漫画加载出来  
             for nWidth in range(0,22000,800):  
                 js = "var q=document.documentElement.scrollTop=" + str(nWidth)  
                 driver.execute_script(js)  
-            //等待1秒  
+            #等待1秒  
             time.sleep(1)  
-            //获取HTML页面  
+            #获取HTML页面  
             HTML = driver.page_source.encode('utf-8','ignore')  
-            //爬取并下载  
+            #爬取并下载  
             Creg = re.compile(reg)  
             PictureLinkList = re.findall(Creg,HTML)  
             nIndex = 0  
@@ -85,5 +85,5 @@ icon: icon-python
                 strLink = strLink.replace("amp;","")  
                 urllib.urlretrieve(strLink,"C:/Picture/%s.jpg" % nIndex)  
                 nIndex += 1 
-            driver.quit()   
-```
+            driver.quit()
+            ```
