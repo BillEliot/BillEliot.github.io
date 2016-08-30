@@ -21,6 +21,7 @@ categories: [database]
       SegmentTree
     CBinaryConver
     
+    
  ## CHighPrecision
       Function:
         string HighAdd(string strA,string strB); 高精度加法
@@ -39,21 +40,21 @@ categories: [database]
    ## CGraphTheory
         Function:
           int* SPFA(int nStart);                  SPFA
-	        int* Dijkstra(int nStart);              迪杰斯特拉
-	        int Kruskal(KRUSKAL* pS_Kruskal,int nMax_Line);   克鲁斯卡尔
+	  int* Dijkstra(int nStart);              迪杰斯特拉
+	  int Kruskal(KRUSKAL* pS_Kruskal,int nMax_Line);   克鲁斯卡尔
           
    ## CDisjointSet
         Function:
           void Init();                             初始化
-	        int Find(int nPos);                      查找父亲
-	        void Union(int nFather_A,int nFather_B); 合并集合
+	  int Find(int nPos);                      查找父亲
+	  void Union(int nFather_A,int nFather_B); 合并集合
           
    ## CTreeArray
         int Lowbit(int N);                       Lowbit
-	      void Add(int nPos,int nOffset);          加偏移量
-	      int Sum(int N);                          求区间和
+	void Add(int nPos,int nOffset);          加偏移量
+	int Sum(int N);                          求区间和
           
    ## CBinaryConversion
         int BinaryToTen(string strNum,int nCur_Binary);   任意进制转10进制
-	      string TenToBinary(int nNum,int nTo_Binary);      10进制转任意进制
-	      string BinaryToBinary(string strNum,int nCur_Binary,int nTo_Binary); 任意进制转任意进制
+	string TenToBinary(int nNum,int nTo_Binary);      10进制转任意进制
+	string BinaryToBinary(string strNum,int nCur_Binary,int nTo_Binary); 任意进制转任意进制
