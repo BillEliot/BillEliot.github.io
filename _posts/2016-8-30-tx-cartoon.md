@@ -38,6 +38,7 @@ icon: icon-python
   
   
 ``` python
+#coding=utf-8
 import urllib  
 import re  
 #引用WebDriver  
