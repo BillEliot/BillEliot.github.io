@@ -22,13 +22,14 @@ categories: [database]
       SegmentTree
     CBinaryConver
 ```
-```
+
 ### CHighPrecision
       Function:
+      ``` c++
       string HighAdd(string strA,string strB); 高精度加法
       string HighDec(string strA,string strB); 高精度减法
       string HighMul(string strA,string strB); 高精度乘法
-      
+      ```
 ### CMathTheory
       Function:
       bool IsPrime(int nNum);                  素数判定
@@ -59,4 +60,3 @@ categories: [database]
       int BinaryToTen(string strNum,int nCur_Binary);   任意进制转10进制
       string TenToBinary(int nNum,int nTo_Binary);      10进制转任意进制
       string BinaryToBinary(string strNum,int nCur_Binary,int nTo_Binary); 任意进制转任意进制
-```
