@@ -8,25 +8,25 @@ categories: [database]
 ---
 
 参加竞赛的时候，将NOIP主要的算法做了一个总结，便有了现在的Class:NOIP_Algo，因为特殊性，类中大部分函数需要重载，  
-本类只提供参考，如果大家发现错误的话也希望和我联系。
+本类只提供参考，如果大家发现错误的话也希望和我联系。  
 
-主类：CNOIP_ALGO
-    CNOIP_ALGO派生类:
-    CHighPrecision
-    CMathTheory
-    CGraphTheory
-    CDataStruct
-      CDisjointSet
-      CTreeArray
-      SegmentTree
-    CBinaryConver
+主类：CNOIP_ALGO  
+    CNOIP_ALGO派生类:  
+    CHighPrecision  
+    CMathTheory  
+    CGraphTheory  
+    CDataStruct  
+      CDisjointSet  
+      CTreeArray  
+      SegmentTree  
+    CBinaryConver  
     
     
- ## CHighPrecision
-      Function:
-        string HighAdd(string strA,string strB); 高精度加法
-	      string HighDec(string strA,string strB); 高精度减法
-	      string HighMul(string strA,string strB); 高精度乘法
+ ## CHighPrecision  
+      Function:  
+        string HighAdd(string strA,string strB); 高精度加法  
+	      string HighDec(string strA,string strB); 高精度减法  
+	      string HighMul(string strA,string strB); 高精度乘法  
 	      
   ## CMathTheory
        Function:
