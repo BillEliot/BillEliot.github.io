@@ -32,31 +32,39 @@ categories: [database]
 ```
 ### CMathTheory
       Function:
+``` c++      
       bool IsPrime(int nNum);                  素数判定
       int* PrimeSieve(int MaxNum = 1000);      素数筛法
       int QuickMod(int m,int n,int nMod);      快速幂
       int GetFactorial(int nNum);              求阶乘
       int A(int a,int b);                      排列
       int C(int a,int b);                      组合
-          
+```          
 ### CGraphTheory
       Function:
+``` c++  
       int* SPFA(int nStart);                  SPFA
       int* Dijkstra(int nStart);              迪杰斯特拉
       int Kruskal(KRUSKAL* pS_Kruskal,int nMax_Line);   克鲁斯卡尔
-          
+```          
 ### CDisjointSet
       Function:
+``` c++  
       void Init();                             初始化
       int Find(int nPos);                      查找父亲
       void Union(int nFather_A,int nFather_B); 合并集合
-          
+```          
 ### CTreeArray
+      Function:
+``` c++
       int Lowbit(int N);                       Lowbit
       void Add(int nPos,int nOffset);          加偏移量
       int Sum(int N);                          求区间和
-          
+```          
 ### CBinaryConversion
+      Function:
+``` c++
       int BinaryToTen(string strNum,int nCur_Binary);   任意进制转10进制
       string TenToBinary(int nNum,int nTo_Binary);      10进制转任意进制
       string BinaryToBinary(string strNum,int nCur_Binary,int nTo_Binary); 任意进制转任意进制
+```
