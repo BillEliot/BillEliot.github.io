@@ -1,25 +1,24 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "Jalpc"
-description: "Jack's blog,use Jekyll and github pages."
-keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
+title: "Eliot"
+description: "Eliot's blog power by Jekyll and github pages."
+keywords: "Eliot,Jalpc,blog,Jekyll,github,gh-pages"
 baseurl: "/"
-url: "http://www.jack003.com"
-# url: "http://127.0.0.1:4000"
+url: "http://billeliot.github.io"
 
 # blog img path
-img_path: 'http://www.jack003.com/static/img/blog'
+img_path: '/static/img/blog'
 
 # author
 author:
-  name: 'Jack'
-  first_name: 'Jia'
-  last_name: 'Kun'
-  email: 'me@jack003.com'
-  facebook_username: 'jiakunnj'
-  github_username: 'Jack614'
-  head_img: 'static/img/landing/Jack.jpg'
+  name: 'Eliot'
+  first_name: 'Jiaze'
+  last_name: 'Wu'
+  email: '1161142536@qq.com'
+  facebook_username: ''
+  github_username: 'BillEliot'
+  head_img: '/static/img/landing/Jack.jpg'
 
 # social link
 jingyu:
