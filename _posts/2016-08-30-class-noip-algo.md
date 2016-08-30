@@ -4,7 +4,7 @@ title: "NOIP_Algo类文档"
 date: 2016-08-30
 desc: "NOIP_Algo类文档"
 keywords: "C++,class"
-categories: [database]
+categories: [Database]
 ---
 
 参加竞赛的时候，将NOIP主要的算法做了一个总结，便有了现在的Class:NOIP_Algo，因为特殊性，类中大部分函数需要重载，  
