@@ -86,4 +86,5 @@ icon: icon-python
                 strLink = strLink.replace("amp;","")
                 urllib.urlretrieve(strLink,"C:/Picture/%s.jpg" % nIndex)
                 nIndex += 1
-            driver.quit()  ```
+            driver.quit() 
+            ```
