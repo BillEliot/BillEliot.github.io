@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Python爬取腾讯漫画总结
-description: "总结一下C++调用Python动态爬取腾讯漫画"
-modified: 2016-8-30
+title: 12312313
+description: "123123113123123"
 tags: [sample post]
 image:
   background: triangular.png
 ---
 
-Test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+1312312313123
