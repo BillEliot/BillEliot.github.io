@@ -1,0 +1,11 @@
+div.panel,p.flip{
+  margin:0px;
+  padding:5px;
+  text-align:center;
+  background:#e5eecc;
+  border:solid 1px #c3c3c3;
+}
+div.panel{
+  height:120px;
+  display:none;
+}
