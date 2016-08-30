@@ -40,7 +40,7 @@ landing:
 
 # my projects
 project:
-  C/C++:
+  saplatform:
     name: 'C/C++'
     url: '/Jack614/saplatform'
     img: 'static/img/landing/saplatform.png'
