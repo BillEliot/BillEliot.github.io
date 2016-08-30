@@ -36,7 +36,9 @@ icon: icon-python
   初始化Python解释器:Py_Initialize()  
   释放Python解释器:Py_Finalize()  
   
-  
+Python脚本
+
+
 ``` python
 #coding=utf-8
 import urllib  
@@ -102,10 +104,13 @@ C++调用Python脚本
 	  CString strRank;  
 	  //pIns 实例化的类;GetText WEB中函数名;sss 类型标识符(字符串s,int i等);爬取页面;正则表达式;保存文件名  
 	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","<a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");  
-  
-  这就使用WebDriver动态的获取了HTML页，但是Python保存文件的时候默认编码格式是UTF-8，Unicode下CFile直接读取会乱码，所以需要转码。  
-      BOOL CTXCartoonDlg::ReadUTF8StringFile(CString Path, CString& str){  
-	CFile fileR;  
+```  
+这就使用WebDriver动态的获取了HTML页，但是Python保存文件的时候默认编码格式是UTF-8，Unicode下CFile直接读取会乱码，所以需要转码。 
+
+
+``` c++
+    BOOL CTXCartoonDlg::ReadUTF8StringFile(CString Path, CString& str){  
+    	CFile fileR;  
 	if(!fileR.Open(Path,CFile::modeRead|CFile::typeBinary)){  
 		return false;  
 	}  
