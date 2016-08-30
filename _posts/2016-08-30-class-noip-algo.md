@@ -17,9 +17,9 @@ categories: [Database]
 * CMathTheory
 * CGraphTheory
 * CDataStruct
-  * CDisjointSet
-  * CTreeArray
-  * SegmentTree
+ * CDisjointSet
+ * CTreeArray
+ * SegmentTree
 * CBinaryConver
 
 ### CHighPrecision
