@@ -1,5 +1,5 @@
-title:            Site Title
-description:      Describe your website here.
+title:            Welcome to Eliot's Blog
+description:      I'll be waiting for you here
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
@@ -9,10 +9,10 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Eliot
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  email:          1161142536@qq.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
