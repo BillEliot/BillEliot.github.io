@@ -26,13 +26,11 @@ categories: [database]
 ### CHighPrecision
       Function:
       
-      
-      ``` c++
+``` c++
       string HighAdd(string strA,string strB); 高精度加法
       string HighDec(string strA,string strB); 高精度减法
       string HighMul(string strA,string strB); 高精度乘法
-      ```
-      
+```
       
 ### CMathTheory
       Function:
