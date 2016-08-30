@@ -33,7 +33,7 @@ image:
   
 ### ③：代码概要
   初始化Python解释器:Py_Initialize()  
-  释放Python解释器:Py_Finalize()
+  释放Python解释器:Py_Finalize()  
   ```ruby
   Python代码:
     #coding=utf-8
@@ -86,39 +86,38 @@ image:
                 nIndex += 1
             driver.quit()
   ```
-  C++调用Python脚本:
+  C++调用Python脚本:  
+  //获取Python脚本中的WEB类  
+  pMod = PyImport_ImportModule("Web");  
+	pDict = PyModule_GetDict(pMod);  
+	pClass = PyDict_GetItemString(pDict,"WEB");  
+	pIns = PyInstance_New(pClass,NULL,NULL);  
+	//调用GetText实例  
+	  //获取漫画排行榜  
+	  CString strRank;  
+	  //pIns 实例化的类;GetText WEB中函数名;sss 类型标识符(字符串s,int i等);爬取页面;正则表达式;保存文件名  
+	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","<a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");  
   
-  //获取Python脚本中的WEB类
-  pMod = PyImport_ImportModule("Web");
-	pDict = PyModule_GetDict(pMod);
-	pClass = PyDict_GetItemString(pDict,"WEB");
-	pIns = PyInstance_New(pClass,NULL,NULL);
-	//调用GetText实例
-	  //获取漫画排行榜
-	  CString strRank;
-	  //pIns 实例化的类;GetText WEB中函数名;sss 类型标识符(字符串s,int i等);爬取页面;正则表达式;保存文件名
-	  PyObject_CallMethod(pIns,"GetText","sss","http://ac.qq.com/Rank","<a class=\"mod-rank-name ui-left\" title=\"(.*)\" href=\"","CartoonRank.txt");
-  
-  这就使用WebDriver动态的获取了HTML页，但是Python保存文件的时候默认编码格式是UTF-8，Unicode下CFile直接读取会乱码，所以需要转码。
-      BOOL CTXCartoonDlg::ReadUTF8StringFile(CString Path, CString& str){
-	CFile fileR;
-	if(!fileR.Open(Path,CFile::modeRead|CFile::typeBinary)){
-		return false;
-	}
-	BYTE head[3];
-	fileR.Read(head,3);
-	if(!(head[0]==0xEF && head[1]==0xBB && head[2]==0xBF)){
-		fileR.SeekToBegin();
-	}
-	ULONGLONG FileSize=fileR.GetLength();
-	char* pContent=(char*)calloc(FileSize+1,sizeof(char));
-	fileR.Read(pContent,FileSize);
-	fileR.Close();
-	int n=MultiByteToWideChar(CP_UTF8,0,pContent,FileSize+1,NULL,0);
-	wchar_t* pWideChar=(wchar_t*)calloc(n+1,sizeof(wchar_t));
-	MultiByteToWideChar(CP_UTF8,0,pContent,FileSize+1,pWideChar,n);
-	str=CString(pWideChar);
-	free(pContent);
-	free(pWideChar);
-	return true;
-  }
+  这就使用WebDriver动态的获取了HTML页，但是Python保存文件的时候默认编码格式是UTF-8，Unicode下CFile直接读取会乱码，所以需要转码。  
+      BOOL CTXCartoonDlg::ReadUTF8StringFile(CString Path, CString& str){  
+	CFile fileR;  
+	if(!fileR.Open(Path,CFile::modeRead|CFile::typeBinary)){  
+		return false;  
+	}  
+	BYTE head[3];  
+	fileR.Read(head,3);  
+	if(!(head[0]==0xEF && head[1]==0xBB && head[2]==0xBF)){  
+		fileR.SeekToBegin();  
+	}  
+	ULONGLONG FileSize=fileR.GetLength();  
+	char* pContent=(char*)calloc(FileSize+1,sizeof(char));  
+	fileR.Read(pContent,FileSize);  
+	fileR.Close();  
+	int n=MultiByteToWideChar(CP_UTF8,0,pContent,FileSize+1,NULL,0);  
+	wchar_t* pWideChar=(wchar_t*)calloc(n+1,sizeof(wchar_t));  
+	MultiByteToWideChar(CP_UTF8,0,pContent,FileSize+1,pWideChar,n);  
+	str=CString(pWideChar);  
+	free(pContent);  
+	free(pWideChar);  
+	return true;  
+  }  
