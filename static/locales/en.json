@@ -19,11 +19,11 @@
     "my_skills": "My Skills"
   },
   "projects":{
-    "my_projects": "My Projects",
-    "saplatform": "Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.",
-    "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.",
-    "angularjs": "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.",
-    "rsser": "Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually."
+    "my_projects": "My Hobby",
+    "saplatform": "C/C++ is my first contact with the programming language (does not contain easy language), I like his code style and efficiency, but also my main object!",
+    "jalpc": "Python is my favorite scripting language, his code concise and efficient.",
+    "angularjs": "I love Linux, I love open source, free, he is the geek system, I have been studying it, and strive to become a good source.",
+    "rsser": "I like to use Unity3D to write games, it is very interesting."
   },
   "career":{
     "my_career": "My Career",
