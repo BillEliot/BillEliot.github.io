@@ -34,11 +34,24 @@ icon: icon-python
   
 ### ③：代码概要
   初始化Python解释器:Py_Initialize()  
-  释放Python解释器:Py_Finalize()
+  释放Python解释器:Py_Finalize()  
   
-  Python代码:  
-``` python  
-import urllib
-import re
-#TTTTT
+  
+``` python
+class _const:
+    class ConstError(TypeError): pass
+    class ConstCaseError(ConstError): pass
+    
+    def __setattr__(self, name, value):
+        if self.__dict__.has_key(name):
+            raise self.ConstError, "Can't change const.%s" % name
+        if not name.isupper():
+            raise self.ConstCaseError, 'const name "%s" is not all uppercase' % name
+        self.__dict__[name] = value
+        
+import sys
+sys.modules[__name__]=_const()
+import const
+const.MY_NAME = 'JACK'
+...
 ```
