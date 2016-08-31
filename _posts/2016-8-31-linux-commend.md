@@ -16,12 +16,12 @@ icon: fa-database
 
 ## 文件操作
 * **修改文件所属群组：chgrp [-R] group filename**  
-　　参数：-R 进行递归操作,通常变更一个目录下的所有文件
-* **修改文件拥有者：chown [-R] user filename**
-　　　　　　　　　**chown [-R] user:group filename**
-　　参数：-R 进行递归操作,通常变更一个目录下的所有文件
-* **修改文件权限：chmod**
-　　* **①：数字类型**
-　　　chmod [-R] xyz filename
-　　* **①：符号类型**
-　　　chmod [-R] (ugoa) (+-=) (rwx)
+　　参数：-R 进行递归操作,通常变更一个目录下的所有文件  
+* **修改文件拥有者：chown [-R] user filename**  
+　　　　　　　　　**chown [-R] user:group filename**  
+　　参数：-R 进行递归操作,通常变更一个目录下的所有文件  
+* **修改文件权限：chmod**  
+　　* **①：数字类型**  
+　　　chmod [-R] xyz filename  
+　　* **①：符号类型**  
+　　　chmod [-R] (ugoa) (+-=) (rwx)  
