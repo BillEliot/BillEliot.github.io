@@ -32,8 +32,8 @@ icon: fa-database
 　　　  chmod [-R] xyz filename  
 　　 **①：符号类型**  
 　　　  chmod [-R] (ugoa) (+-=) (rwx)  
+* **压缩/解压缩**  
 
 ## 系统相关  
 * **查看版本信息：uname -r**  
-　　　　　　　         **lsb_release -a**  
-## 压缩/解压缩
+　　　　　　　  **lsb_release -a**  
