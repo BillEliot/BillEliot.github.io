@@ -12,7 +12,7 @@ permalink: /blog/
     </div>
 </div>
 
-<div class="row" style="background-image:url('static/img/landing/BackGround_Geek.jpg');">
+<div class="row">
     <div class="col-lg-8 col-lg-offset-2">
         <div class="wrapper wrapper-content animated fadeInRight">
 
@@ -20,7 +20,7 @@ permalink: /blog/
 			{% for post in site.posts limit:10 %}
             <div class="vote-item">
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-10" style="background-image:url('static/img/landing/BackGround_Geek.jpg');">
                         <div class="vote-actions">
                         </div>
                         <a href="{{ post.url }}" class="vote-title">
