@@ -19,6 +19,8 @@ icon: fa-database
 * **删除目录：rmdir**
 
 ## 文件操作
+* **寻找执行档：which [-a] commend**  
+　　 -a：所有由PATH目录中找到的指令均列出  
 * **修改文件所属群组：chgrp [-R] group filename**  
 　　参数：-R 进行递归操作,通常变更一个目录下的所有文件  
 * **修改文件拥有者：chown [-R] user filename**  
@@ -33,4 +35,5 @@ icon: fa-database
 
 ## 系统相关  
 * **查看版本信息：uname -r**  
-　　　　　　　**lsb_release -a**  
+　　　　　　　         **lsb_release -a**  
+## 压缩/解压缩
