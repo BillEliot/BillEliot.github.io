@@ -30,20 +30,20 @@ layout: default
                         <div class="col-md-6">
                             <div class="small text-right">
                                 <h5>Stats:</h5>
-                                <div> 
                                 <!--
+                                <div> 
                                 {% if site.changyan %}
                                     <i class="fa fa-comments-o"> </i> <span id = "url::{{post.url | prepend: page.url}}" class = "cy_cmt_count" ></span> comments
                                 {% endif %}
                                 {% if site.disqus %}
                                 <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="{{ site.url }}{{ page.url }}">0</span> comments
                                 {% endif %}
+                                </div>
                                 -->
                                 <!-- UY BEGIN -->
                                 <div id="uyan_frame"></div>
                                 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2112261"></script>
                                 <!-- UY END -->
-                                </div>
                             </div>
                         </div>
                     </div>
