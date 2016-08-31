@@ -36,4 +36,4 @@ icon: fa-database
 
 ## 系统相关  
 * **查看版本信息：uname -r**  
-　　　　　　　 **lsb_release -a**  
+　　　　　　　  **lsb_release -a**  
