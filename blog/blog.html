@@ -12,16 +12,16 @@ permalink: /blog/
     </div>
 </div>
 
-<div class="row" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
-    <div class="col-lg-8 col-lg-offset-2" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
-        <div class="wrapper wrapper-content animated fadeInRight" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="wrapper wrapper-content animated fadeInRight">
 
             <!-- latest 10 blog -->
 			{% for post in site.posts limit:10 %}
             <div class="vote-item">
-                <div class="row" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
-                    <div class="col-md-10" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
-                        <div class="vote-actions" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="vote-actions">
                         </div>
                         <a href="{{ post.url }}" class="vote-title">
                             {{ post.title }}
@@ -37,8 +37,8 @@ permalink: /blog/
                             <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
                         </div>
                     </div>
-                    <div class="col-md-2 " style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
-                        <div class="vote-icon" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
+                    <div class="col-md-2 ">
+                        <div class="vote-icon">
                             {% if post.icon %}<i class="fa {{ post.icon }}"> </i>{% endif %}
                         </div>
                     </div>
