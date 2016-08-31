@@ -26,7 +26,7 @@ permalink: /blog/
                         <a href="{{ post.url }}" class="vote-title">
                             {{ post.title }}
                         </a>
-                        <div class="vote-info" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
+                        <div class="vote-info">
                         {% if site.changyan %}
                             <i class="fa fa-comments-o"> </i> <a>Comments (<span id = "url::{{post.url | prepend: site.url}}" class = "cy_cmt_count" ></span>)</a>
                         {% endif %}
