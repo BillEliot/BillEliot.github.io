@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: "Linux命令总结"
 date: 2016-8-31
 desc: "Linux命令总结"
