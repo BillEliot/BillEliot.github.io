@@ -28,20 +28,20 @@ permalink: /blog/
                         </a>
                         <div class="vote-info">
                         <!--多说 Start-->
-                       	<span class="ds-thread-count" data-thread-key="{{ post.title }}" data-count-type="comments">暂无评论</span>
-			<!-- 多说js加载开始，一个页面只需要加载一次 -->
-			<script type="text/javascript">
-			var duoshuoQuery = {short_name:"eliot"};
-			(function() {
-			    var ds = document.createElement('script');
-			    ds.type = 'text/javascript';ds.async = true;
-			    ds.src = 'http://static.duoshuo.com/embed.js';
-			    ds.charset = 'UTF-8';
-			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-			})();
-			</script>
-			<!-- 多说js加载结束，一个页面只需要加载一次 -->
-			<!--多说 Stop-->
+                        $(function() {
+		    	var shortName = "eliot";
+		    	var threads = "{{ post.title }}";
+		
+		    	var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=" + shortName + "&threads=" + threads +  "&callback=?";
+		    	$.getJSON(jsonUrl, function(result) {
+		        $.each(result.response, function(i, field) {
+		            var value = field.comments;
+		            $(".duoshuo-count").text(value);
+		        		})
+		    		})
+			})
+			<a>value</a>
+			<!--多说 End-->
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
                             <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
                         </div>
