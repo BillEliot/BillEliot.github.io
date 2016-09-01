@@ -3,6 +3,7 @@
 #### Unity3D -> Mac
 
 评论管理后台：http://www.uyan.cc/sites
+CNZZ流量统计：http://web.umeng.com/main.php?c=site&a=show
 ------------------------------------------------------------------------------------------------------------------------------
 # Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/Jack614/jalpc_jekyll_theme)
 
