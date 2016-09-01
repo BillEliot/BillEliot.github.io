@@ -4,19 +4,6 @@ title: Blog
 permalink: /blog/
 ---
 
-$(function() {
-    var shortName = "eliot";
-    var threads = "{{ post.title }}";
-
-    var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=" + shortName + "&threads=" + threads +  "&callback=?";
-    $.getJSON(jsonUrl, function(result) {
-        $.each(result.response, function(i, field) {
-            var value = field.comments;
-            $(".duoshuo-count").text(value);
-        })
-    })
-})
-
 <div class="row" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
     <div class="col-lg-12 text-center">
         <div class="navy-line"></div>
@@ -40,7 +27,7 @@ $(function() {
                         </a>
                         <div class="vote-info">
                         <!--多说 Start-->
-			value
+			
 			<!--多说 End-->
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
                             <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
