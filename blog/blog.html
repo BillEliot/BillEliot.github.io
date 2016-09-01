@@ -27,7 +27,7 @@ permalink: /blog/
                         </a>
                         <div class="vote-info">
                         <!--多说 Start-->
-			
+			<span id="ccount"></span>
 			<!--多说 End-->
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
                             <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
@@ -47,3 +47,19 @@ permalink: /blog/
 
 </div>
 
+<script type="text/javascript" src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+<script type="text/javascript">
+$(function(){ 
+    var uid = "eliot";//多说用户ID，也就是二级域名 
+    var aid = "{{ post.title }}";//文章ID，唯一的文章标识。 
+    var getstr = "http://api.duoshuo.com/threads/counts.jsonp?short_name="+uid+"&threads="+aid+"&callback=?"; 
+       $.getJSON(getstr, function(data) { 
+          var comval='';  
+          $.each(data.response, function(i, item) { 
+          comval += item.comments; 
+        }); 
+     //alert(comval); 
+          $("#ccount").text(comval);//ccount是需要设置的论评数的html元素ID 
+          }); 
+      }); 
+</script> 
