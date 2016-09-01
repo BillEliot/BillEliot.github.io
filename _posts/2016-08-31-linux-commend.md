@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Linux命令总结"
 date: 2016-08-31
