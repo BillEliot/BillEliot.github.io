@@ -5,21 +5,6 @@ permalink: /blog/
 ---
 
 <script type="text/javascript" src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
-<script type="text/javascript">
-$(function(){ 
-    var uid = "eliot";
-    var aid = "{{ post.title }}"; 
-    var getstr = "http://api.duoshuo.com/threads/counts.jsonp?short_name="+uid+"&threads="+aid+"&callback=?"; 
-    $.getJSON(getstr, function(data) { 
-       var comval='';  
-       $.each(data.response, function(i, item) { 
-       comval += item.comments; 
-     }); 
-     alert(comval); 
-       $("#ccount").text(comval);
-       }); 
-     });
-</script>
 
 <div class="row" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
     <div class="col-lg-12 text-center">
@@ -44,6 +29,21 @@ $(function(){
                         </a>
                         <div class="vote-info">
                         <!--多说 Start-->
+                        <script type="text/javascript">
+$(function(){ 
+    var uid = "eliot";
+    var aid = "{{ post.title }}"; 
+    var getstr = "http://api.duoshuo.com/threads/counts.jsonp?short_name="+uid+"&threads="+aid+"&callback=?"; 
+    $.getJSON(getstr, function(data) { 
+       var comval='';  
+       $.each(data.response, function(i, item) { 
+       comval += item.comments; 
+     }); 
+       $("#ccount").text(comval + "条评论");
+       }); 
+     });
+</script>
+                        
 			<span id="ccount"></span>
 			<!--多说 End-->
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
