@@ -39,9 +39,7 @@ permalink: /blog/
 			       $.each(data.response, function(i, item) { 
 			       comval += item.comments; 
 			     }); 
-			       //$("#ccount").text(comval + "条评论");
-			       var Text = document.getElementById('ccount');
-  			       Text.innerHTML = comval;
+			     	$('#ccount').html(comval);
 			       }); 
 			     });
 			</script>
