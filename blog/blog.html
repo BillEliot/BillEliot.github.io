@@ -32,10 +32,7 @@ permalink: /blog/
                         <!--多说 Start-->
                         <script type="text/javascript">
 			var countUrl = "http://api.duoshuo.com/threads/counts.json?short_name=eliot&threads={{ post.id }}";
-			$.getJSON(countUrl , function(data) {
-			});
-			
-			console.log(data);
+			$.getJSON(countUrl , function(data) {console.log(data);});
                         </script>
 			<!--多说 End-->
                         <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
