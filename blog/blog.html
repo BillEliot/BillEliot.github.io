@@ -28,20 +28,8 @@ permalink: /blog/
                             {{ post.title }}
                         </a>
                         
-                        <script type = "text/javascript">
-			function duoshuoCountCallBack(data){
-			    if(data.code == 0) {
-			        var commentCount = data.response.art_detail_{thread-key}.comments;
-			        $("#article_11").text(commentCount);
-			    }
-			}
-			
-			var countUrl = 'http://api.duoshuo.com/threads/counts.json?short_name={eliot}&threads={ {{ post.id }} }';
-			$("head").append("<script type='text\/javascript' src='"+countUrl+"&callback=duoshuoCountCallBack'><\/script>");
-			</script>
                         <div class="vote-info">
                         <!--多说 Start-->
-                        <span id="article_11"></span>
 			<!--多说 End-->
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
                             <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
