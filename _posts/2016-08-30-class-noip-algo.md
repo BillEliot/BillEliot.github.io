@@ -31,7 +31,7 @@ categories: [Database]
       string HighMul(string strA,string strB); //高精度乘法
 ```
 
-<h3 id = "HP">CMathTheory</h3>
+<h3 id = "MT">CMathTheory</h3>
 
 ``` c++      
   //Function:
@@ -43,7 +43,7 @@ categories: [Database]
       int C(int a,int b);                      //组合
 ```          
 
-<h3 id = "HP">CGraphTheory</h3>
+<h3 id = "GT">CGraphTheory</h3>
 
 ``` c++
   //Function:
@@ -52,7 +52,7 @@ categories: [Database]
       int Kruskal(KRUSKAL* pS_Kruskal,int nMax_Line);   //克鲁斯卡尔
 ```          
 
-<h3 id = "HP">CDisjointSet</h3>
+<h3 id = "DSe">CDisjointSet</h3>
       
 ``` c++  
   //Function:
@@ -61,7 +61,7 @@ categories: [Database]
       void Union(int nFather_A,int nFather_B); //合并集合
 ```          
 
-<h3 id = "HP">CTreeArray</h3>
+<h3 id = "TA">CTreeArray</h3>
       
 ``` c++
   //Function:
@@ -70,7 +70,7 @@ categories: [Database]
       int Sum(int N);                          //求区间和
 ```          
 
-<h3 id = "HP">CBinaryConversion</h3>
+<h3 id = "BC">CBinaryConversion</h3>
       
 ``` c++
   //Function:
