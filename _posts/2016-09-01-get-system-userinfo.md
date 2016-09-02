@@ -77,8 +77,7 @@ if(lRetn == ERROR_SUCCESS){
 
 ## 枚举项目下所有子项目
 
-**
-LONG RegEnumKeyEx(  
+**LONG RegEnumKeyEx(  
   HKEY hKey,  
   DWORD dwIndex,  
   LPTSTR lpName,  
