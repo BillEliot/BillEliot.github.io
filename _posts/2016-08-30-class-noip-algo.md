@@ -16,7 +16,7 @@ categories: [Database]
 * [CHighPrecision](#HP)
 * [CMathTheory](#MT)
 * [CGraphTheory](#GT)
-* [CDataStruct](#DSt)
+* [CDataStruct]
   * [CDisjointSet](#DSe)
   * [CTreeArray](#TA)
   * [SegmentTree](#ST)
