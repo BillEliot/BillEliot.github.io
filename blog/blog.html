@@ -28,11 +28,11 @@ permalink: /blog/
                             {{ post.title }}
                         </a>
                         <div class="vote-info">
-                        <!--多说 Start
+                        <!--多说 Start-->
                         <script type="text/javascript">
 			$(function(){ 
 			    var uid = "eliot";
-			    var aid = "{{ post.title }}"; 
+			    var aid = "{{ post.id }}"; 
 			    var getstr = "http://api.duoshuo.com/threads/counts.jsonp?short_name="+uid+"&threads="+aid+"&callback=?"; 
 			    $.getJSON(getstr, function(data) { 
 			       var comval='';  
@@ -44,7 +44,7 @@ permalink: /blog/
 			     });
 			</script>
 			<span id="ccount"></span>
-			多说 End-->
+			<!--多说 End-->
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
                             <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
                         </div>
