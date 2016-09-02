@@ -68,7 +68,7 @@ permalink: /blog/
 		    }
 		}
 		//请求文章评论数的多说URL
-		var countUrl = 'http://api.duoshuo.com/threads/counts.json?short_name=eliot&threads=' + threadKeys.join(",");
+		var countUrl = 'http://api.duoshuo.com/threads/counts.jsonp?short_name=eliot&threads=' + threadKeys.join(",");
 		$("head").append("<script type='text\/javascript' src='"+countUrl+"&callback=duoshuoCountCallBack'><\/script>");
 	});
 	
