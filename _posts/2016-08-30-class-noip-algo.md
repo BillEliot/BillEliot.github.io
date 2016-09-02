@@ -22,7 +22,7 @@ categories: [Database]
   * [SegmentTree](#ST)
 * [CBinaryConver](#BC)
 
-### [HP]: "CHighPrecision"
+<h3 id = "HP">CHighPrecision</h3>
 
 ``` c++
   //Function:
