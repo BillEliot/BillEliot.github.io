@@ -13,14 +13,14 @@ categories: [Database]
 主类：CNOIP_ALGO
     CNOIP_ALGO派生类:
     
-* [CHighPrecision] [#HP]
-* [CMathTheory] [#MT]
-* [CGraphTheory] [#GT]
-* [CDataStruct] [#DSt]
-  * [CDisjointSet] [#DSe]
-  * [CTreeArray] [#TA]
-  * [SegmentTree] [#ST]
-* [CBinaryConver] [#BC]
+* [CHighPrecision](#HP)
+* [CMathTheory](#MT)
+* [CGraphTheory](#GT)
+* [CDataStruct](#DSt)
+  * [CDisjointSet](#DSe)
+  * [CTreeArray](#TA)
+  * [SegmentTree](#ST)
+* [CBinaryConver](#BC)
 
 ### [#HP]: CHighPrecision
 
