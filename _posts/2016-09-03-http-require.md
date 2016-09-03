@@ -4,7 +4,7 @@ title: "Http请求详细过程"
 desc: "Http请求详细过程"
 keywords: [Http]
 tags: [Http]
-categories: [Html]
+categories: [HTML]
 ---
 
 **Http是一个应用层协议，只是一种通讯规范，也就是双方要进行通信需要事先约定一个规范**  
