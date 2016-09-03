@@ -61,7 +61,7 @@ project:
 index:
   home: 'Home'
   python: 'Python'
-  linux: 'Linux'
+  linux: 'Linux&Windows'
   html: 'HTML'
   database: 'C/C++'
   mac: 'Unity3D'
