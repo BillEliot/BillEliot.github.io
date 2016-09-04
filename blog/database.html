@@ -12,7 +12,7 @@ permalink: /database/
 </div>
 
 <div class="wrapper wrapper-content  animated fadeInRight blog" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
-    <div class="row">
+    <div class="row" dataid="{{ post.title }}">
 		<ul id="pag-itemContainer" style="list-style:none;">
     {% assign counter = 0 %}
 		{% for post in site.categories['Database'] %}
@@ -40,7 +40,7 @@ permalink: /database/
                                 {% endfor %}
                         </div>
                         <div class="col-md-6">
-                            <div class="small text-right" dataid="{{ post.title }}">
+                            <div class="small text-right">
                                 <h5>Stats:</h5>
                                 <div> 
                                 <!-- 多说 Start -->
@@ -82,7 +82,7 @@ permalink: /database/
 	}
 	
 	$(function(){
-		var items = $(".small text-right");
+		var items = $(".row");
 		var threadKeys = [];
 		for(var i=0; i<=items.length; i++) {
 			var domId = "duoshuo_"+i;
