@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "Linux命令总结"
-date: 2016-08-31
 desc: "Linux命令总结"
+date: 2016-08-31
 keywords: "Linux,Console"
 categories: [Linux]
 tags: [Linux,Console]
-icon: fa-database
 ---
 
 ## 基本命令
