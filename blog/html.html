@@ -43,6 +43,7 @@ permalink: /html/
                             <div class="small text-right">
                                 <h5>Stats:</h5>
                                 <div>
+                                <i class="fa fa-clock-o"></i> <a class="comment_count"></a>
                                 </div>
                             </div>
                         </div>
@@ -57,3 +58,39 @@ permalink: /html/
 
     </div>
 </div>
+
+<script type="text/javascript">
+	var commentKeyIds = [];
+	
+	function duoshuoCountCallBack(data){
+	    if(data.code == 0) {
+	        var comments = data.response;
+	        for(var item in comments) {
+	        	var comnts = comments[item].comments;
+	        	for(var i=0; i<commentKeyIds.length; i++) {
+	        		var key = commentKeyIds[i + 1].key;
+	        		if(key == item) {
+	        			var domId = commentKeyIds[i].id;
+			        	$("#" + domId).text(comnts + " 条评论");
+			        	break;
+	        		}
+	        	}
+	        }
+	    }
+	}
+	
+	$(function(){
+		var items = $(".ibox-content");
+		var threadKeys = [];
+		for(var i=0; i<=items.length; i++) {
+			var domId = "duoshuo_"+i;
+			commentKeyIds.push({key: key, id: domId});
+			var key = $(items[i]).attr("dataid");
+			$(items[i]).find(".comment_count").attr("id", domId);
+			threadKeys.push(key);
+		}
+		var countUrl = 'https://api.duoshuo.com/threads/counts.jsonp?short_name=eliot&threads=' + threadKeys.join(",");
+		$("head").append("<script type='text\/javascript' src='"+countUrl+"&callback=duoshuoCountCallBack'><\/script>");
+	});
+	
+</script>
