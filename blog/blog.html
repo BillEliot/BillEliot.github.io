@@ -19,7 +19,7 @@ permalink: /blog/
 
             <!-- latest 10 blog -->
 			{% for post in site.posts limit:10 %}
-            <div class="vote-item" dataid="{{ post.title }}">
+            <div class="vote-item" dataid="{{ post.id }}">
                 <div class="row">
                     <div class="col-md-10">
                         <div class="vote-actions">
@@ -31,7 +31,7 @@ permalink: /blog/
                         <div class="vote-info">
 	                        <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
 	                        <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
-	                        <i class="fa fa-clock-o"></i> <a id="{{ post.title }}"></a>
+	                        <i class="fa fa-clock-o"></i> <a class="comment_count"></a>
                         </div>
                     </div>
                     <div class="col-md-2 ">
@@ -47,14 +47,22 @@ permalink: /blog/
     </div>
 </div>
 <script type="text/javascript">
+	var commentKeyIds = [];
+	
 	function duoshuoCountCallBack(data){
 	    if(data.code == 0) {
 	        //这里的数据结构跟官方文档给出的不太一样，以实际的为准
 	        var comments = data.response;
 	        for(var item in comments) {
-	        	var id = item;
 	        	var comnts = comments[item].comments;
-	        	$("#" + id).text(comnts + " 条评论");
+	        	for(var i=0; i<commentKeyIds.length; i++) {
+	        		var key = commentKeyIds[i].key;
+	        		if(key == item) {
+	        			var domId = commentKeyIds[i].id;
+			        	$("#" + domId).text(comnts + " 条评论");
+			        	break;
+	        		}
+	        	}
 	        }
 	    }
 	}
@@ -63,11 +71,14 @@ permalink: /blog/
 		var items = $(".vote-item");
 		var threadKeys = [];
 		for(var i=0; i<items.length; i++) {
+			var domId = "duoshuo_"+i;
+			commentKeyIds.push({key: key, id: domId});
 			var key = $(items[i]).attr("dataid");
+			$(items[i]).find(".comment_count").attr("id", domId);
 			threadKeys.push(key);
 		}
 		//请求文章评论数的多说URL
-		var countUrl = 'http://api.duoshuo.com/threads/counts.jsonp?short_name=eliot&threads=' + threadKeys.join(",");
+		var countUrl = 'https://api.duoshuo.com/threads/counts.jsonp?short_name=eliot&threads=' + threadKeys.join(",");
 		$("head").append("<script type='text\/javascript' src='"+countUrl+"&callback=duoshuoCountCallBack'><\/script>");
 	});
 	
