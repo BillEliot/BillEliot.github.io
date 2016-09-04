@@ -1,7 +1,7 @@
 ---
 layout: "post"
-title: "神经网络(拓扑排序、DFS)"
-desc: "神经网络(拓扑排序、DFS)"
+title: "神经网络【拓扑排序、DFS】"
+desc: "神经网络【拓扑排序、DFS】"
 date: 2016-09-04
 keywords: "C++,Noip,DFS,Topological"
 tags: [C++,Noip,DFS,Topological]
