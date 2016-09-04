@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "C++ 获取系统信息"
-desc: "C++ 获取系统信息"
+title: "获取系统信息"
+desc: "获取系统信息"
 date: 2016-09-01
 keywords: "C++,SystemInfo"
 tags: [C++,SystemInfo]
