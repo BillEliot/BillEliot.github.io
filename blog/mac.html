@@ -64,7 +64,6 @@ permalink: /mac/
 	
 	function duoshuoCountCallBack(data){
 	    if(data.code == 0) {
-	        //这里的数据结构跟官方文档给出的不太一样，以实际的为准
 	        var comments = data.response;
 	        for(var item in comments) {
 	        	var comnts = comments[item].comments;
@@ -72,7 +71,7 @@ permalink: /mac/
 	        		var key = commentKeyIds[i + 1].key;
 	        		if(key == item) {
 	        			var domId = commentKeyIds[i].id;
-			        	$("#" + domId).text(comnts + " 条评论");
+			        	$("#" + domId).text(comnts + " 条评�?);
 			        	break;
 	        		}
 	        	}
@@ -81,7 +80,7 @@ permalink: /mac/
 	}
 	
 	$(function(){
-		var items = $(".vote-item");
+		var items = $(".ibox-content");
 		var threadKeys = [];
 		for(var i=0; i<=items.length; i++) {
 			var domId = "duoshuo_"+i;
@@ -90,7 +89,6 @@ permalink: /mac/
 			$(items[i]).find(".comment_count").attr("id", domId);
 			threadKeys.push(key);
 		}
-		//请求文章评论数的多说URL
 		var countUrl = 'https://api.duoshuo.com/threads/counts.jsonp?short_name=eliot&threads=' + threadKeys.join(",");
 		$("head").append("<script type='text\/javascript' src='"+countUrl+"&callback=duoshuoCountCallBack'><\/script>");
 	});
