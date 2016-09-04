@@ -39,13 +39,13 @@ permalink: /database/
                                     <button class="btn btn-white btn-xs" type="button">{{ tag }}</button>
                                 {% endfor %}
                         </div>
-                        <div class="col-md-6" dataid="{{ post.title }}">
-                            <div class="small text-right">
+                        <div class="col-md-6">
+                            <div class="small text-right" dataid="{{ post.title }}">
                                 <h5>Stats:</h5>
+                                <div> 
                                 <!-- 多说 Start -->
                                 <i class="fa fa-clock-o"></i> <a class="comment_count"></a>
                                 <!-- 多说 End -->
-                                <div> 
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ permalink: /database/
 	}
 	
 	$(function(){
-		var items = $(".col-md-6");
+		var items = $(".small text-right");
 		var threadKeys = [];
 		for(var i=0; i<=items.length; i++) {
 			var domId = "duoshuo_"+i;
