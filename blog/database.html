@@ -1,4 +1,4 @@
----
+﻿---
 layout: blog
 title: Database
 permalink: /database/
@@ -69,11 +69,12 @@ permalink: /database/
 	        var comments = data.response;
 	        for(var item in comments) {
 	        	var comnts = comments[item].comments;
+			var likes = comments[item].likes;
 	        	for(var i=0; i<commentKeyIds.length; i++) {
 	        		var key = commentKeyIds[i + 1].key;
 	        		if(key == item) {
 	        			var domId = commentKeyIds[i].id;
-			        	$("#" + domId).text(comnts + " 条评论");
+			        	$("#" + domId).text(comnts + " 条评论" + "   " + likes + " 喜欢");
 			        	break;
 	        		}
 	        	}
