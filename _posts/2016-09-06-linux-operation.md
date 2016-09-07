@@ -186,3 +186,51 @@ rm /test/hello.txt 删除源文件后，硬链接仍可以正常使用
 
 ## 压缩及解压缩
 
+### gzip
+
+*描述*：压缩与解压缩  
+*用法*：gzip[option]... [file]...  
+*选项*：-d 解压  
+Example：gzip hello.txt 文件压缩后名为 hello.txt.gz  
+                  gzip -d hello.txt.gz 解压gz文件  
+                  
+### bzip2
+
+*描述*：压缩与解压缩  
+Example：bzip2 hello.txt 文件压缩后名为 hello.txt.gz  
+                  bzip2 -d hello.txt.gz 解压gz文件  
+
+*gzip与bzip2 不可以对目录进行压缩操作*  
+
+### tar
+
+*描述*：压缩与解压缩  
+*用法*：tar 模式 [option] [path]...  
+*模式*：-c 创建压缩文件  
+              --delete 从压缩文件中删除文件  
+              -r 追加文件到打包文件  
+              -t 列出打包文件的内容  
+              -x 释放打包文件  
+*选项*：-C 指定解压文件  
+              -f 指定压缩后的文件名称  
+              -j 打包后通过bzip2格式压缩  
+              --remove-files 压缩后删除源文件  
+              -z 打包后通过gzip格式压缩  
+Example：tar -cf etc.tar /etc/ 将/etc/目录压缩保存为etc.tar  
+                  tar -czf boot.tar.gz /boot/ 将/boot/目录压缩为 etc.tar.gz  
+                  tar -cjf boot.tar.bz2 /tmp/ 将/tmp/目录压缩为 etc.tar.bz2  
+                  tar --delete etc/hosts -f etc.tar 从压缩文件中删除文件 hosts  
+                  tar -f etc.tar -r /root/install.log 追加文件到 etc.tar  
+                  tar -tf boot.tar.gz 查看压缩文件文件信息  
+                  tar -xzf boot.tar.gz 解压gz格式的压缩文件到当前目录  
+                  tar -xjf etc.tar.bz2 解压bz2格式的压缩文件到当前目录  
+                  tar -xzf boot.tar.gz -C /tmp 指定解压路径为 /tmp  
+                  tar -czf mess.tar.gz /var/log/messages --remove-files 压缩后删除源文件  
+                  
+## 命令技巧
+
+**Tab键补全命令；双按Tab键列出所有以当前字母开头的命令**  
+**上、下键翻阅命令历史；history列出所有命令记录；!N N为命令编号，表示执行第N条历史命令**  
+**Ctrl+L清屏**  
+**which 命令 返回命令所在目录**  
+
