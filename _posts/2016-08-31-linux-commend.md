@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Linux命令总结"
-desc: "Linux命令总结"
+title: "Linux简单命令小结"
+desc: "Linux简单命令小结"
 date: 2016-08-31
 keywords: "Linux,Console"
 categories: [Linux]
