@@ -99,10 +99,90 @@ Example：find -name hello.doc 查找当前目录下名为 hello.doc 的文件
 *描述*：计算文件/目录容量  
 *用法*：du [option]... [file/directory]  
 *选项*：-h 人性化显示容量信息  
-              -s 仅显示总容量  
+             -s 仅显示总容量  
            
 ## 查看文件内容
 
 ### cat
 
-*描述*：
+*描述*：查看文件内容  
+*用法*：cat[option]... [file]...  
+*选项*：-b 显示行号(空白行不显示行号)  
+              -n 显示行号(包括空白行)  
+              
+### more
+
+*描述*：分页查看文件内容(空格键查看下一页，q退出)  
+
+### less
+
+*描述*：分页查看文件内容(空格查看下一页，方向键上下回翻，q退出)  
+
+### head
+
+*描述*：查看文件头部内容(默认显示10行)  
+*用法*：head [option]... [file]...  
+*选项*：-c nK 显示文件前 nKB 的内容  
+             -n 显示文件前 n行 内容  
+             
+### tail
+
+*描述*：查看文件尾部内容(默认显示10行)  
+*用法*：tail[option]... [file]...  
+*选项*：-c nK 显示文件末尾 nKB 的内容  
+             -n 显示文件末尾 n行 内容  
+             -f 动态显示文件内容(Ctrl+C退出)  
+             
+### wc
+
+*描述*：显示文件的行、单词、字节统计信息  
+*用法*：wc[option]... [file]...  
+*选项*：-c 显示文件字节统计信息
+             -l 显示文件行数统计信息  
+             -w 显示文件单次统计信息  
+             
+### grep
+
+*描述*：查找关键词并打印匹配的行  
+*用法*：grep[option] 匹配模式 [file]...  
+*选项*：-i 忽略大小写  
+             -v 取反匹配  
+             -w 匹配单词  
+             --color 显示颜色  
+Example：grep th test.txt 在 test.txt 文件中过滤出包含 th 的行  
+                  grep --color th test.txt 对匹配的关键字显示颜色  
+                  grep -i the test.txt 过滤出包含 th 的行(不区分大小写)  
+                  grep -w num test.txt 过滤单词 num  
+                  grep -v the test.txt 过滤不包含 the 的行  
+                  
+### echo
+
+*描述*：显示一行指定的文本  
+*用法*：echo [option]... "string"...  
+*选项*：-n 不输出换行(默认echo输出内容后换行)  
+              -e 支持反斜线开始的转义字符  
+                  \\ 反斜线  
+                  \a  报警器  
+                  \b  退格键  
+                  \c  不生成格外输出  
+                  \f  输入表单格式，换行后保留光标位置  
+                  \n  换行  
+                  \t  水平 Tab  
+                  \v  垂直 Tab  
+                  
+## 链接文件
+
+Linux 中的链接文件不同于Windows的快捷方式，Linux的链接文件分为**软链接**和**硬链接**，*软链接可以跨分区，但源文件不可删除；硬链接不可跨分区，但可以删除源文件.*  
+
+* 软链接  
+
+ ln -s /test/hello.txt /tmp/hi.txt 创建文件软链接
+ ln -s /test/ /var/test 创建目录软链接  
+ 
+ * 硬链接
+
+ln /test/hello.txt /test/hi.txt  
+rm /test/hello.txt 删除源文件后，硬链接仍可以正常使用  
+
+## 压缩及解压缩
+
