@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Linux运维之道"
 desc: "Linux运维之道"
@@ -308,4 +308,108 @@ Linux 的组有基本组和附加组。一个用户只可以加入一个基本�
 
 *描述*：删除组账号  
 
-## 
+## 账户与组文件解析
+
+### 账户信息文件
+
+账户信息保存在 /etc/passwd 文件中，可以通过 cat /etc/passwd 查看文件  
+root:x:0:0:root:/root:/bin/bash  
+文件以冒号为分隔符：  
+
+* 第一列为账号名称  
+* 第二列为密码占位符(x 表示该账号需要密码才可以登录，为空时账号无需密码即可登录)  
+* 第三列为UID  
+* 第四列为GID  
+* 第五列为账号附加基本信息(一般存储账号全称、联系方式等信息)  
+* 第六列为账号 家目录 位置  
+* 第七列为账号登陆 Shell(/bin/bash 为可登陆系统Shell；/sbin/nologin表示账号无法登录系统)  
+
+### 账号密码文件
+
+账号密码信息保存在 /etc/shadow 文件中，可以通过 cat /etc/shadow 查看文件  
+root:\$6\$05tfHji5$D5eGQtPWYdMU.d8RMjI./gGMRaa28cKfLhkhZKyUQrQB8FBjbMQ9rlCBK6Wu29sylwGklRrGPZsq9gdd0x0ti/:17049:0:99999:7:::
+文件以冒号为分隔符：  
+
+* 第一列为账号名称  
+* 第二列为密码(未设置显示 !!；设置密码后加密显示)  
+* 第三列为上次修改密码的时间距离 1970.01.01 几天  
+* 第四列为密码最短有效天数(0表示无限制)  
+* 第五列为密码最长有效天数(默认 99999 为无限期)  
+* 第六列为过期前的警告天数(默认过期前7天警告)  
+* 第七列为密码过期后的宽限天数(预留天数给账号修改密码，无法使用旧密码登录系统)  
+* 第八列为账号失效日期(从 1970.01.01 起多少天后账号失效)  
+* 第九列保留  
+
+### 组账号信息文件
+
+组账号信息保存在 /etc/group 文件中，可以通过 cat /etc/group 查看文件  
+root:x:0:  
+文件以冒号为分隔符：  
+
+* 第一列为组账号名称  
+* 第二列为密码占位符  
+* 第三列为GID  
+* 第四列为组成员(仅显示基本成员，附加成员不显示)  
+
+### 组账号密码文件
+
+组账号密码信息保存在 /etc/gshadow 文件中，可以通过 cat /etc/gshadow 查看文件  
+root:*::  
+文件以冒号为分隔符：
+
+* 第一列为组账号名称  
+* 第二列为组密码  
+* 第三列为组管理员  
+* 第四列为组成员(仅显示基本成员，附加成员不显示)  
+
+**通过 gpasswd groupname 可以为组设置密码**  
+**通过 gpasswd -A username groupname 可以为组添加管理员**  
+
+## 文件/目录权限
+
+Linux权限主要分为 读(r)、写(w)、执行(x) 三种控制，使用 ls -l 显示信息：  
+total 516
+drwxr-xr-x  2 root root   4096 Aug 11  2015 bin
+drwxr-xr-x  5 root root   4096 Aug 11  2015 caf
+drwxr-xr-x  2 root root   4096 Aug 11  2015 doc
+drwxr-xr-x  5 root root   4096 Aug 11  2015 etc
+-rw-r--r--  1 root root 279342 Aug 11  2015 FILES
+-rw-r--r--  1 root root   2538 Aug 11  2015 INSTALL
+drwxr-xr-x  2 root root   4096 Aug 11  2015 installer
+drwxr-xr-x 15 root root   4096 Aug 11  2015 lib
+drwxr-xr-x  3 root root   4096 Aug 11  2015 vgauth
+-rwxr-xr-x  1 root root    243 Aug 11  2015 vmware-install.pl
+-rwxr-xr-x  1 root root 205572 Aug 11  2015 vmware-install.real.pl
+
+* 第一列第一字符为文件类型(-为普通文件；d为目录；l为链接文件；b/c为设备)  
+* 第一列第二字符到第九字符为权限，三位一组分别为所有者权限、所属组权限、其他账号权限  
+* 第二列为连接数量或子目录数量  
+* 第三列为文档所有者  
+* 第四列为文件的属组  
+* 第五列为容量  
+* 第六列为文件被修改的月份  
+* 第七列为文件修改的日期  
+* 第八列为文件被修改的时间  
+* 第九列为文件/目录名称  
+
+**权限的表示，除了可以用rwx表示外，还可以用数字表示**  
+
+|数字|字符|文件|目录|
+|:----:|:----:|:----:|:----:|
+|4|R|查看文件内容|查看目录下的文件与子目录名称|
+|2|W|修改文件内容|在目录下增、删、改、文件与子目录名称|
+|1|X|可执行(程序或脚本)|可以cd进入该目录|
+
+### 修改文件属性
+
+#### chmod
+
+*描述*：修改文件/目录权限  
+*用法*：chmod [option] 权限 file/directory  
+*选项*：--reference=RFILE 根据参考文档设置权限  
+        -R 递归操作(修改所有子目录和子文件)  
+
+**chmod参数中，u为所有者，g为属组，o为其他用户，a为所有人**  
+Example：chmod u=rwx,g=rwx,o=rwx install.log  
+         chmod a=rw install.log  
+**使用字符修改权限的另一种形式是在原有权限的基础上修改权限，方法**
