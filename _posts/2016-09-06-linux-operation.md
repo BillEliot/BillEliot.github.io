@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Linux运维之道"
 desc: "Linux运维之道"
@@ -412,4 +412,18 @@ drwxr-xr-x  3 root root   4096 Aug 11  2015 vgauth
 **chmod参数中，u为所有者，g为属组，o为其他用户，a为所有人**  
 Example：chmod u=rwx,g=rwx,o=rwx install.log  
          chmod a=rw install.log  
-**使用字符修改权限的另一种形式是在原有权限的基础上修改权限，方法**
+**使用字符修改权限的另一种形式是在原有权限的基础上修改权限，方法是使用 +/- 权限的方法**  
+Example：chmod g-x,o-wx install.log  
+         chmod --reference=install.log.syslog install.log 以 install.log.syslog 为参考修改 install.log 的权限  
+         
+#### chown
+
+*描述*：修改文件/目录的所有者和属组
+*用法*：chown [option][所有者][:[属组]] file/directory  
+*选项*：-R 递归操作(修改所有子目录和子文件)  
+Example：chown user2:mail install 修改文件的所有者为user2，属组为mail  
+         chown :root install 仅修改文件属组为 root  
+         chown root install 仅修改文件所有者为 root  
+         
+## 账户管理案例
+
