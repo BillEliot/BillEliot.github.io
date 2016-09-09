@@ -69,6 +69,6 @@ Linux 根据设备类型对存储设备进行识别，IDE存储设备被识别�
 ## 磁盘分区
 
 传统的MBR分区方式是一块硬盘最多可以分四个主分区，即使硬盘还有剩余空间也无法继续分区。  
-![alt text](/../static/img/blog/0.png)  
+![alt text](/../static/img/blog/LinuxOpertion/0.png)  
 传统的MBR分区方式中，如果需要更多的分区就需要使用 扩展分区中创建逻辑分区 的方法实现。如图，此时可以在扩展分区中划分多个逻辑分区，所有逻辑分区的总和为扩展分区的大小。逻辑分区一定是以编号5开始的(SATA硬盘的第一个逻辑分区一定是 sda5)；  
-![alt text](/../static/img/blog/1.png)  
+![alt text](/../static/img/blog/LinuxOpertion/1.png)  
