@@ -230,7 +230,7 @@ Example：tar -cf etc.tar /etc/ 将/etc/目录压缩保存为etc.tar
 ## 命令技巧
 
 **Tab键补全命令；双按Tab键列出所有以当前字母开头的命令**  
-**上、下键翻阅命令历史；history列出所有命令记录；!N N为命令编号，表示执行第N条历史命令 ([详细见Linux运维之道(4)](https://billeliot.github.io/linux/2016/09/09/linux-opertion_3.html)**  
+**上、下键翻阅命令历史；history列出所有命令记录；!N N为命令编号，表示执行第N条历史命令 ([详细见Linux运维之道(4)](https://billeliot.github.io/linux/2016/09/09/linux-opertion_3.html))**  
 **Ctrl+L清屏**  
 **which 命令 返回命令所在目录**  
 
