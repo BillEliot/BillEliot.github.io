@@ -240,7 +240,7 @@ Example：tar -cf etc.tar /etc/ 将/etc/目录压缩保存为etc.tar
 **info 命令**  
 **命令 --help**  
 
-## 账户与安全  
+# 账户与安全  
 
 ### 账户和组
 
