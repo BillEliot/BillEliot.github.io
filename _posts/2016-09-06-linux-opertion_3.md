@@ -114,3 +114,84 @@ Please input a number:30
          
 ## 变量的使用范围
 
+使用 name=[value] 形式定义的变量默认仅在当前Shell中有效，子进程不会继承变量。  
+使用 export 将变量放入环境中，新进程会从父进程继承环境，export可以直接定义环境变量并赋值。  
+Example：TEST=pass  
+         echo $TEST  
+         bash 当前Shell下开启新进程bash  
+         echo $TEST 查看变量值为空  
+         exit  
+         export TEST 添加至环境变量  
+         export NAME=tom 直接定义环境变量  
+         
+## 环境变量
+
+bash预设的环境变量：  
+
+|变量名|含义|
+|:----:|:--:|
+|BASHPID|当前bash的PID|
+|GROUPS|当前用户属组的GID|
+|HOSTNAME|当前主机名|
+|PWD|当前工作目录|
+|OLDPWD|前一个工作目录|
+|RANDOM|0~32767之间的随机数|
+|UID|当前用户ID|
+|HISTSIZE|命令历史记录的最多条数|
+|HOME|当前用户家目录|
+|PATH|命令搜索路径|
+|PS1|主命令提示符|
+|PS2|次命令提示符|
+
+Linux 系统通过PATH变量搜索命令，PATH变量的值就是目录集合，系统会按照顺序查找这些命令，如果找不到则提示未找到。  
+Example：echo $PATH
+         /usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/root/bin
+目录以 : 分隔  
+对PATH修改时，不可直接赋值，这会覆盖掉PATH的值，而要在原值后追加新值。  
+Example：PATH=$PATH:/root (因为并没有写入文件，这只是临时修改，重启终端后就会复原)  
+## 位置变量
+
+位置变量在脚本中可以调用运行脚本时不同位置的参数，参数以空格分隔，$0 代表当前脚本程序文件名，$1 代表脚本程序的第一个参数，$2 为第二个参数，以此类推($1~$9)。$# 代表脚本程序所有参数个数；$* 与 $@ 代表所有参数的内容，区别是 $*将所有参数作为一个整体，$@ 将所有参数分别作为个体看待；$$ 代表当前进程的 ID；$? 表示程序的退出码(0 表示执行成功；非0 表示失败)。  
+Example：编写一个脚本  
+vi /root/Shell.sh 写Shell  
+\#!/bin/bash  
+echo "The file name : $0"  
+echo "The first parameter : $1"  
+echo "The second parameter : $2"  
+echo "The number of all parameters are : $#"  
+echo "All parameters: $*"  
+echo "All parameters: $@"  
+echo "PID : $$"  
+bash Shell.sh a b c 执行Shell  
+The file name : Shell.sh  
+The first parameter : a  
+The second parameter : b  
+The number of all parameters are : 3  
+All parameters: a b c  
+All parameters: a b c  
+PID : 6128  
+
+## 变量的展开替换
+
+Linux 中可以使用 ${变量名} 的形式展开变量的值，一个变量为 NAME=Eliot ，可以使用 echo ${NAME} 显示该变量值，除此之外还有更丰富的变量展开功能。  
+${varname:-word} 如果 varname 存在并且非 null，则返回其值，否则返回word  
+${varname:=word} 如果 varname 存在并且非 null，则返回其值，否则设置为word  
+${varname:?word} 如果 varname 存在并且非 null，则返回其值，否则返回varname:word  
+${varname:+word} 如果 varname 存在并且非 null，则返回word，否则返回null  
+Example:NAME=Eliot  
+        echo ${NAME:-no user}  
+        echo ${NAME_B:-no user}  
+        echo ${NAME:=no user}  
+        echo ${NAME_B:=no user}  
+        echo ${NAME:?no defined}  
+        echo ${NAME_B:?no defined}  
+        echo ${NAME:+OK}  
+        echo ${NAME_B:+ERROR}  
+
+${varname#key} 从头开始删除关键字，执行最短匹配  
+${varname##key} 从头开始删除关键字，执行最长匹配  
+${varname%key} 从尾开始删除关键字，执行最短匹配  
+${varname%%key} 从尾开始删除关键字，执行最长匹配  
+${varname/old/new} 将 old 替换为 new ，仅替换第一个出现的 old  
+${varname//old//new} 将 old 替换为 new ，替换所有 old  
+Example：
