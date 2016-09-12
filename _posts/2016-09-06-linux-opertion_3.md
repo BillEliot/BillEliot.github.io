@@ -193,5 +193,22 @@ ${varname##key} 从头开始删除关键字，执行最长匹配
 ${varname%key} 从尾开始删除关键字，执行最短匹配  
 ${varname%%key} 从尾开始删除关键字，执行最长匹配  
 ${varname/old/new} 将 old 替换为 new ，仅替换第一个出现的 old  
-${varname//old//new} 将 old 替换为 new ，替换所有 old  
-Example：
+${varname//old/new} 将 old 替换为 new ，替换所有 old  
+Example：USER=$(head -1 /etc/passwd)  
+         echo $USER  
+         root:x:0:0:root:/root:/bin/bash  
+         echo ${USER#*:}  
+         x:0:0:root:/root:/bin/bash  
+         echo ${USER##*:}  
+         /bin/bash  
+         echo ${USER%:*}  
+         root:x:0:0:root:/root:/bin/bash  
+         echo ${USER%%:*}  
+         root  
+         echo ${USER/root/admin}  
+         admin:x:0:0:root:/root:/bin/bash  
+         echo ${USER//root/admin}  
+         admin:x:0:0:admin:/admin:/bin/bash  
+         
+## 数组
+
