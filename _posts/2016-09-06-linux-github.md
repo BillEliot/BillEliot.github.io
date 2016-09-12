@@ -10,7 +10,7 @@ categories: [Linux]
 
 * 生成 ssh key  
 
-ssh-keygen -t rsa -C "email@email.com"(默认保存在/root/.ssh/id_rsa.pub)  
+ssh-keygen -t rsa -C "email@email.com"(默认保存在/home/user/.ssh/id_rsa.pub)  
 
 * 添加SSH key
 
