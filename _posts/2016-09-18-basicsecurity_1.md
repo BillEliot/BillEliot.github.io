@@ -48,7 +48,7 @@ Metasploit框架是一个综合的测试漏洞的平台，并且可以执行溢�
 ![alt text](/../static/img/blog/BasicSecurity/2.png)  
 依赖于 exploit 的类型，一旦exploit成功执行，我们通常会获取一个远程计算机的Shell或者一个Metasploit的Shell。  
 一个远程Shell是基于远程终端连接或者文字版的远程桌面(Windows用户，它允许我们键入命令行)。  
-但是一个Metasploit的Shell提供大量的有趣的实用的程序以便我们获取有关目标主机的信息、控制像摄像头和手机的设备、甚至将它作为跳板使我们获取网络权限。  
+但是一个Metasploit的Shell提供大量的有趣的实用的程序以便我们获取有关目标主机的信息、控制像摄像头和麦克风的设备、甚至将它作为跳板使我们获取网络权限。  
 当然，如果需要，你也可以将它作为一个普通的Shell使用。  
 大多数情况下，这取决于你尝试进行的事，一个 Metasploit 的Shell会比一个普通的Shell有很多优势。  
 
