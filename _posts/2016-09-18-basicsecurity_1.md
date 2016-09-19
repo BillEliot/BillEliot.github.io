@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "【翻译】Basic Security Testing with Kali Linux (2014)"
-desc: "【翻译】Basic Security Testing with Kali Linux (2014)"
+title: "【翻译】Basic Security Testing with Kali Linux (2014) —— 【一】"
+desc: "【翻译】Basic Security Testing with Kali Linux (2014) —— 【一】"
 date: 2016-09-18
 keywords: [Linux,Translate]
 tags: [Linux,Translate]
