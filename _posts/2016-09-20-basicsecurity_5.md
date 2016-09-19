@@ -19,20 +19,20 @@ User Access Control(UAC)似乎在Windows上很烦人，因此很多用户选择�
 ## 绕过 UAC
 
 首先将会话放置到后台。  
-![alt text](/../static/img/blog/BasicSecurity/0.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/0.png)  
 使用 bypassuac exploit  
-![alt text](/../static/img/blog/BasicSecurity/1.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/1.png)  
 使用 show options 查看需设置的变量  
-![alt text](/../static/img/blog/BasicSecurity/2.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/2.png)  
 我们只需用 set session ID 设置活跃的会话  
-![alt text](/../static/img/blog/BasicSecurity/3.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/3.png)  
 最后，使用 exploit 运行 bypassuac  
-![alt text](/../static/img/blog/BasicSecurity/4.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/4.png)  
 非常好，你可以看到用户事实上是administratiors组的一员，UAC bypass开始工作了并且一个新的会话被创建了。  
 现在我们再次尝试 getuid，可以看到他仍然显示 user Fred，但是我们执行 getsystem，再次执行 getuid，事实上我们已经获取了System权限。  
-![alt text](/../static/img/blog/BasicSecurity/5.png)  
-![alt text](/../static/img/blog/BasicSecurity/6.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/5.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/6.png)  
 
 现在，如果我们想dump系统的密码哈希，使用脚本 run post/windows/gather/hashdump  
-![alt text](/../static/img/blog/BasicSecurity/7.png)  
-![alt text](/../static/img/blog/BasicSecurity/8.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/7.png)  
+![alt text](/../static/img/blog/BasicSecurity_5/8.png)  
