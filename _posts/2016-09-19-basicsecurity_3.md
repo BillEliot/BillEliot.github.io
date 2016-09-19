@@ -24,10 +24,10 @@ Recon-NG 框架是一个强大的工具，它可以全自动进行信息收集�
 ## 使用Recon-NG
 
 键入 recon-ng 打开工具  
-![alt text](/../static/img/blog/basicsecurity_3/0.png)  
+![alt text](/../static/img/blog/BasicSecurity_3/0.png)  
 键入 help 查看帮助信息  
-![alt text](/../static/img/blog/basicsecurity_3/1.png)  
+![alt text](/../static/img/blog/BasicSecurity_3/1.png)  
 现在，你可以像Meatsploit那样键入 show modules 查看可用模块列表：  
-![alt text](/../static/img/blog/basicsecurity_3/2.png)  
+![alt text](/../static/img/blog/BasicSecurity_3/2.png)  
 
 To be continued...
