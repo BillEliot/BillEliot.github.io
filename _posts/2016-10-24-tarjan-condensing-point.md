@@ -160,6 +160,7 @@ for (int i = 1; i <= N; i ++) {
 * Date: 2016-10-24
 * Author: Eliot
 * Description: Tarjan + 缩点(Vijos: P1626爱在心中)
+* QQ: 1161142536
 */
 
 #include <iostream>
