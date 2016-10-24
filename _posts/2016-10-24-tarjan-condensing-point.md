@@ -22,7 +22,7 @@ Tarjan的作用就是求有向图中的强连通分量的个数， 但是在很�
 **总体思路**  
 
 *题目中的图*  
-![alt text]()
+![alt text](/../static/img/blog/tarjan/0.png)
 
 思路很清晰的一道题目， 很明显的 ```Tarjan + 缩点```。  
 如果还不会Tarjan还不会的同学请移至隔壁```CSDN博客```学习。  
