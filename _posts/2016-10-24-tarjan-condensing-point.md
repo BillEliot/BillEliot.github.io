@@ -27,6 +27,7 @@ Tarjan的作用就是求有向图中的强连通分量的个数， 但是在很�
 思路很清晰的一道题目， 很明显的 ```Tarjan + 缩点```。  
 如果还不会Tarjan还不会的同学请移至隔壁```CSDN博客```学习。  
 主要说一下缩点， 缩点在Tarjan中新增设一个数组为 Belong， 来标识该强连通分量属于第几个强连通, 比如上图中2, 3属于一个强连通， 4, 5, 6属于一个强连通，则可以得：  
+
 |Belong|Value|
 |------|-----|
 |Belong[1]|1|
@@ -37,6 +38,7 @@ Tarjan的作用就是求有向图中的强连通分量的个数， 但是在很�
 |Belong[6]|3|
 
 之后重新构图， 求出缩点后每个强连通的出度， 用数组P记录， 如下：
+
 |P|Value|
 |-|-----|
 |P[1]|1|
@@ -51,13 +53,6 @@ Tarjan的作用就是求有向图中的强连通分量的个数， 但是在很�
 **Tarjan(带缩点) 代码注释：**  
 
 ```c++
-void Init() {
-    for (int i = 1; i <= n; i ++) {
-        Belong[i] = i;
-        From[i] = i;
-    }
-}
-
 int ans_Love = 0, ans_Love_T[MAX] = { 0 };
 
 int Belong[MAX] = { 0 };
@@ -74,7 +69,6 @@ Name: Tarjan
 Description: 求强连通分量(缩点) 
 ***********************************/
 //事先初始化 for (int i = 1; i <= N; i++) Belong[i] = i;
-
 void Tarjan(int nPoint) {
 	DFN[nPoint] = LOW[nPoint] = ++ nIndex;    //更新DFN LOW 时间截
 	IsStack[nPoint] = true;    //标记入栈
