@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tarjan 缩点"
+title: "Vijos P1626 爱在心中 Tarjan 缩点"
 date: 2016-10-23
 desc: "Tarjan 缩点"
 keywords: "C++, Noip, Tarjan"
