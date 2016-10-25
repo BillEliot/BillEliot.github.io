@@ -53,14 +53,14 @@ struct LINE{
 	LINE() : a(0), b(0), c(0) {}
 }Line[MAX];
 
-long long comp(LINE A, LINE B) {
+int comp(LINE A, LINE B) {
 	return A.c < B.c;
 }
 
 long long nFather[MAX] = { 0 };
 long long Num[MAX] = { 0 };
 void Init() {
-	for (long long i = 1; i <= MAX; i ++) {
+	for (int i = 1; i <= MAX; i ++) {
 		nFather[i] = i;
 		Num[i] = 1;
 	}
@@ -72,7 +72,7 @@ long long Find(long long x) {
 	return nFather[x];
 }
 
-long long Union(long long nFather_A, long long nFather_B) {
+void Union(long long nFather_A, long long nFather_B) {
 	nFather[nFather_A] = nFather_B;
 	Num[nFather_B] += Num[nFather_A];
 }
