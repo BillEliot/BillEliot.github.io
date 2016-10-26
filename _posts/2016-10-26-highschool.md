@@ -15,7 +15,7 @@ categories: [Database]
 ## 错误思路
 
 开始的想法是这样子的：  
-![alt text](/../static/img/HighSchool/0.png)  
+![alt text](/../static/img/blog/HighSchool/0.png)  
 
 读入一行各大学专业排名， 如果 T[i] < T[j] 就连一条 i到j 的边，然后跑n遍 SPFA最长路(也可以设一个 ```超级源点```)， 最后求出 dis[n]的最大值。  
 但这样是不对的(╮(╯▽╰)╭)， 因为只考虑了某专业的一行大学排名， 并没有兼顾其他行的排名， 比如上图中第一行 2->3 但在第二行 3在2的前面，虽然矛盾了，但我们仍然连接了 2到3 的一条边， 所以我们求出的结果总比正确结果大。  
@@ -25,10 +25,10 @@ categories: [Database]
 我们考虑这样建图：  
 申请一个 ```bFlag``` 数组。  
 读入一行各大学专业排名， 只要 i < j，就 bFlag[i][j] = true, 最后是这样子的：  
-![alt text](/../static/img/HighSchool/1.png)  
+![alt text](/../static/img/blog/HighSchool/1.png)  
 接下来我们按照条件连边，**两个顶点 i, j， 只有 bFlag[i][j]=true 且 bFlag[j][i]=false 的情况下， 我们添加 i到j 的一条边. 这就满足了题目所要求的条件**  
 考虑到答案 顶点数=边数+1 以及 只跑一遍SPFA最长路， 我们设立一个 ```超级源点```，如下：  
-![alt text](/../static/img/HighSchool/2.png)  
+![alt text](/../static/img/blog/HighSchool/2.png)  
 最后跑一遍 SPFA最长路 ，求出 dis[1...n] 中最大值即为答案。  
 
 ## 代码
