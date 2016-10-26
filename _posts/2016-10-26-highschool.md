@@ -4,6 +4,7 @@ title: "【建模】高校排名"
 date: 2016-10-25
 desc: "【建模】高校排名"
 keywords: "C++, Noip, Modeling"
+tags: [C++, Noip, Modeling]
 categories: [Database]
 ---
 
