@@ -5,7 +5,7 @@ desc: "NOIP神经网络"
 date: 2016-09-04
 keywords: "C++,Noip,DFS,Topological"
 tags: [C++,Noip,DFS,Topological]
-categories: [Database]
+categories: [Noip]
 ---
 
 ## NOIP2003 神经网络【拓扑排序、DFS】
