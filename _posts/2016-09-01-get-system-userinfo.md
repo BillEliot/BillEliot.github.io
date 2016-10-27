@@ -5,7 +5,7 @@ desc: "获取系统信息"
 date: 2016-09-01
 keywords: "C++,SystemInfo"
 tags: [C++,SystemInfo]
-categories: [Database]
+categories: [C++]
 ---
 
 # 注册表操作
