@@ -63,7 +63,7 @@ index:
   python: 'Python'
   linux: 'Linux&Windows'
   html: 'HTML'
-  database: 'C/C++'
+  c++: 'C/C++'
   noip: 'NOIP'
   mac: 'Unity3D'
   life: 'Life'
