@@ -5,7 +5,7 @@ date: 2016-10-25
 desc: "【Study】矩阵乘法 重载运算符"
 keywords: "C++, Noip, Matrix, Overload"
 tags: [C++, Noip, Matrix, Overload]
-categories: [Database]
+categories: [Noip]
 ---
 
 *矩阵乘法的计算法则不再赘述，请自行Google。*  
