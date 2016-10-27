@@ -5,7 +5,7 @@ date: 2016-10-25
 desc: "宿命的PSS 逆向Kruskal 并查集"
 keywords: "C++, Noip, Kruskal"
 tags: [C++, Noip, Kruskal]
-categories: [Database]
+categories: [Noip]
 ---
 
 **题目链接**：[宿命的PSS](https://vijos.org/p/1579)  
