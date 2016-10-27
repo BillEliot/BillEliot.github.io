@@ -56,7 +56,14 @@
                             <li>
                         {% endif %}
                             <a class="page-scroll" href="/database/">{{ site.index.database }}</a></li>
-
+                        
+                        {% if page.title == site.index.noip %}
+                            <li class="active">
+                        {% else %}
+                            <li>
+                        {% endif %}
+                            <a class="page-scroll" href="/noip">{{ site.index.noip }}</a></li>
+                                  
                         {% if page.title == site.index.mac %}
                             <li class="active">
                         {% else %}
