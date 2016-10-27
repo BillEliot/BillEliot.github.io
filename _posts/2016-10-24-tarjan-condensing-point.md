@@ -5,7 +5,7 @@ date: 2016-10-23
 desc: "Tarjan 缩点"
 keywords: "C++, Noip, Tarjan"
 tags: [C++, Noip, Tarjan]
-categories: [Database]
+categories: [Noip]
 ---
 
 **一些无聊的概念之类的废话不再累赘，满满的全是干货！**  
