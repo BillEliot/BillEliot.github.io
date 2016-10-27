@@ -4,7 +4,7 @@ title: "线段树总结"
 date: 2016-09-01
 desc: "线段树总结"
 keywords: "C++,Segment Tree"
-categories: [Database]
+categories: [Noip]
 tags: [C++,Segment Tree]
 ---
 
