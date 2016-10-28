@@ -4,6 +4,19 @@ title: Blog
 permalink: /blog/
 ---
 
+<style type="text/css">
+.warp{ 
+	background:#eee url(back.jpg) no-repeat left top;    
+	border:1px solid #ccc;
+}
+.content { 
+	margin:0px auto; 
+	padding:30px 30px; 
+	background:rgba(255, 255, 255, 0.6)!important;
+	filter:Alpha(opacity=40); 
+	background:#fff;
+	.content p{ position:relative;}
+</style>
 <script type="text/javascript" src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
 
 <div class="row" style="background-image:url('/../static/img/landing/bg_blog.jpg');">
@@ -19,8 +32,8 @@ permalink: /blog/
 
             <!-- latest 10 blog -->
 			{% for post in site.posts limit:13 %}
-            <div class="vote-item" dataid="{{ post.title }}" style="background:transparent">
-                <div class="row">
+            <div class="vote-item warp" dataid="{{ post.title }}" style="background:transparent">
+                <div class="row content">
                     <div class="col-md-10">
                         <div class="vote-actions">
                         </div>
