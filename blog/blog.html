@@ -4,6 +4,23 @@ title: Blog
 permalink: /blog/
 ---
 
+<style>
+.testdiv{
+position: fixed; 
+z-index: 1; 
+top:60px; 
+left:295px; 
+height: 40px; 
+border: 0; 
+margin: 0; 
+padding: 0; 
+z-index: 2; 
+background-color: rgb(255, 255, 255); 
+filter:alpha(opacity=20); /*ie透明度20%*/ 
+-moz-opacity:0.8;        /*Moz + FF 透明度20%*/ 
+opacity:0.8; /*支持CSS3的浏览器(FF1.5也支持)透明度20%*/ 
+}
+</style>
 <script type="text/javascript" src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
 
 <div class="row" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
@@ -13,7 +30,7 @@ permalink: /blog/
     </div>
 </div>
 
-<div class="row" style="background-image:url('/../static/img/landing/bg_blog.jpg');background-size:100%;">
+<div class="row testdiv" style="background-image:url('/../static/img/landing/bg_blog.jpg');background-size:100%;">
     <div class="col-lg-8 col-lg-offset-2">
         <div class="wrapper wrapper-content animated fadeInRight">
 
