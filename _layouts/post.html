@@ -2,10 +2,24 @@
 layout: default
 ---
 
-  <div class="wrapper wrapper-content  animated fadeInRight article" style="background-image:url('/../static/img/landing/BackGround_Simple.jpg');">
+<style type="text/css">
+.warp{ 
+	background:#eee url(back.jpg) no-repeat left top;    
+	border:1px solid #ccc;
+}
+.content { 
+	margin:0px auto; 
+	padding:30px 30px; 
+	background:rgba(255, 255, 255, 0.6)!important;
+	filter:Alpha(opacity=40); 
+	background:#fff;
+	.content p{ position:relative;}
+</style>
+
+  <div class="wrapper wrapper-content  animated fadeInRight article warp" style="background-image:url('/../static/img/landing/BackGround_Simple.jpg');">
      <div class="row">
          <div class="col-lg-10 col-lg-offset-1">
-             <div class="ibox" style="background-image:url('/../static/img/landing/BackGround_Read.jpg');">
+             <div class="ibox content" style="background-image:url('/../static/img/landing/BackGround_Read.jpg');">
                  <div class="ibox-content" style="background-image:url('/../static/img/landing/BackGround_Read.jpg');">
                      <div class="pull-right">
                      	{% for category in page.categories %}
