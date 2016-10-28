@@ -4,14 +4,28 @@ title: HTML
 permalink: /html/
 ---
 
-<div class="row" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
+<style type="text/css">
+.warp{ 
+	background:#eee url(back.jpg) no-repeat left top;    
+	border:1px solid #ccc;
+}
+.content { 
+	margin:0px auto; 
+	padding:30px 30px; 
+	background:rgba(255, 255, 255, 0.6)!important;
+	filter:Alpha(opacity=40); 
+	background:#fff;
+	.content p{ position:relative;}
+</style>
+
+<div class="row" style="background-image:url('/../static/img/landing/bg_blog.jpg');">
     <div class="col-lg-12 text-center">
         <div class="navy-line"></div>
         <h1>HTML</h1>
     </div>
 </div>
 
-<div class="wrapper wrapper-content  animated fadeInRight blog" style="background-image:url('/../static/img/landing/BackGround_Geek.jpg');">
+<div class="wrapper wrapper-content  animated fadeInRight blog warp" style="background-image:url('/../static/img/landing/bg_blog.jpg');background-size:100%;">
     <div class="row">
 		<ul id="pag-itemContainer" style="list-style:none;">
     {% assign counter = 0 %}
@@ -20,7 +34,7 @@ permalink: /html/
 		<li>
         <div class="col-lg-8 col-lg-offset-2">
             <div class="ibox">
-                <div class="ibox-content" dataid="{{ post.title }}">
+                <div class="ibox-content content" dataid="{{ post.title }}">
                     <a href="{{ post.url }}" class="btn-link">
                         <h2>
                             {{ post.title }}
