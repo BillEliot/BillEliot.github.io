@@ -17,10 +17,10 @@ layout: default
 </style>
 
   <div class="wrapper wrapper-content animated fadeInRight article warp">
-     {% if page.bgp == "" %}
-         <div class="row" style="background-image:url('/../static/img/landing/bg_text.jpg');background-size:100%;">
+     {% if page.bgp %}
+         <div class="row" style="background-image:url('/../static/img/landing/{{ page.bgp }}');background-size:100%;">
      {% else %}
-  	 <div class="row" style="background-image:url('/../static/img/landing/{{ page.bgp }}');background-size:100%;">
+	 <div class="row" style="background-image:url('/../static/img/landing/bg_text.jpg');background-size:100%;">
      {% endif %}
          <div class="col-lg-10 col-lg-offset-1">
              <!--<div class="ibox">-->
