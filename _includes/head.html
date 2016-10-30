@@ -17,6 +17,14 @@
         {{ site.title }}
     {% endif %}
   </title>
+  
+  <script type="text/javascript" src="{{"static/js/spig.js"| prepend: site.baseurl }}"></script>
+  <link rel="stylesheet" href="{{"static/css/spigPet.css"| prepend: site.baseurl }}" type="text/css"/>
+  <script type="text/javascript">
+  var isindex = true;
+  var visitor = true;
+  </script>
+  
   <!-- favicon -->
   <link rel="shortcut icon" href="{{ "static/img/favicon.ico" | prepend: site.baseurl }}">
 
@@ -93,11 +101,4 @@
     background:#fff;
     .content p{ position:relative;}
   </style>
-  
-  <script type="text/javascript" src="{{"static/js/spig.js"| prepend: site.baseurl }}"></script>
-  <link rel="stylesheet" href="{{"static/css/spigPet.css"| prepend: site.baseurl }}" type="text/css"/>
-  <script type="text/javascript">
-  var isindex = true;
-  var visitor = true;
-  </script>
 </head>
