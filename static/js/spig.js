@@ -3,7 +3,7 @@
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
-        showMessage("播报明日天气<iframe name=\"xidie\" src=\"http:\/\/tianqi.xixik.com\/cframe\/1\" frameborder=\"0\" scrolling=\"no\" height=\"25px\"  width=\"170px\" allowtransparency=\"true\" ></iframe>",10000);
+        showMessage("欢迎来到Eliot's Blog！",10000);
 
 }
 });
@@ -18,7 +18,6 @@ jQuery(document).ready(function ($) {
        $("#message").fadeTo("100", 1);
      });
 });
-
 
 //鼠标在上方时
 jQuery(document).ready(function ($) {
@@ -55,7 +54,7 @@ jQuery(document).ready(function ($) {
         }
     }
     else {
-        showMessage('欢迎' + visitor + '来到重庆陈江林SEO《' + title + '》', 6000);
+        showMessage('欢迎' + visitor + '来到Eliot《' + title + '》', 6000);
     }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
@@ -68,7 +67,7 @@ jQuery(document).ready(function ($) {
 });
 
 //鼠标在某些元素上方时
-jQuery(document).ready(function ($) {
+/*jQuery(document).ready(function ($) {
     $('h2 a').click(function () {//标题被点击时
         showMessage('正在用吃奶的劲加载《<span style="color:#0099cc;">' + $(this).text() + '</span>》请稍候');
     });
@@ -123,7 +122,7 @@ jQuery(document).ready(function ($) {
     $('#switch-to-wap').mouseover(function(){
         showMessage('点击可以切换到手机版博客版面');
     });
-});
+});*/
 
 
 //无聊讲点什么
@@ -156,7 +155,7 @@ jQuery(document).ready(function ($) {
 });
 
 //评论资料
-jQuery(document).ready(function ($) {
+/*jQuery(document).ready(function ($) {
     $("#author").click(function () {
         showMessage("留下你的尊姓大名！");
         $(".spig").animate({
@@ -202,7 +201,7 @@ jQuery(document).ready(function ($) {
 		    duration: 1000
 		});
     });
-});
+});*/
 
 var spig_top = 50;
 //滚动条移动
