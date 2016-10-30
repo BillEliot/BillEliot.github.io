@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "【题目】爱在心中 Tarjan 缩点"
 date: 2016-10-23
@@ -6,6 +6,7 @@ desc: "Tarjan 缩点"
 keywords: "C++, Noip, Tarjan"
 tags: [C++, Noip, Tarjan]
 categories: [Noip]
+bgp: "bg_text_3"
 ---
 
 **一些无聊的概念之类的废话不再累赘，满满的全是干货！**  

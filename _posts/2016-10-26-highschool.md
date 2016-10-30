@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "【建模】高校排名"
 date: 2016-10-25
@@ -6,6 +6,7 @@ desc: "【建模】高校排名"
 keywords: "C++, Noip, Modeling"
 tags: [C++, Noip, Modeling]
 categories: [Noip]
+bgp: "bg_text_5"
 ---
 
 **题目链接**: [高校排名](http://codevs.cn/problem/2799/)  

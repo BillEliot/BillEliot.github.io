@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "【搜索】单词接龙"
 date: 2016-10-27
@@ -6,6 +6,7 @@ desc: "【搜索】单词接龙"
 keywords: "C++, Noip, Search"
 tags: [C++, Noip, Search]
 categories: [Noip]
+bgp: "bg_text_8"
 ---
 
 题目链接： [单词接龙](http://codevs.cn/problem/1018/) <small>2000年NOIP全国联赛提高组</small>  
