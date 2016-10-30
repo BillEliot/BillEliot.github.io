@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "【题目】宿命的PSS 逆向Kruskal 并查集"
 date: 2016-10-25
