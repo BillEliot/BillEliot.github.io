@@ -92,11 +92,11 @@ Date：2016.8.12
 /*****************************************
 Class:HighPrecision
 Description:高精度运算类
-				高精度加法
-				高精度减法
-				高精度乘法
-				高精度除法
-				高精度取模
+               高精度加法
+               高精度减法
+               高精度乘法
+               高精度除法
+               高精度取模
 *****************************************/
 string CHighPrecision::HighAdd(string strA, string strB){
 	Init();
@@ -178,12 +178,12 @@ string CHighPrecision::HighMul(string strA, string strB){
 /*****************************************
 Class:CMathTheory
 Description:数论类
-				素数判断 -> 判断所给数字是否为素数
-				素数筛 -> 筛选出2~N之间的所有素数
-				快速幂 -> 快速计算 m ^ n % k
-				求阶乘 -> 计算 N!
-				排列 -> 计算A(m,n)
-				组合 -> 计算C(m,n)
+               素数判断 -> 判断所给数字是否为素数
+               素数筛 -> 筛选出2~N之间的所有素数
+               快速幂 -> 快速计算 m ^ n % k
+               求阶乘 -> 计算 N!
+               排列 -> 计算A(m,n)
+               组合 -> 计算C(m,n)
 *****************************************/
  bool CMathTheory::IsPrime(int nNum){
 	 for(int i = 2; i <= sqrt(nNum); i ++){
@@ -319,9 +319,9 @@ int CGraphTheory::Kruskal(KRUSKAL* pS_Kruskal, int nMax_Line){
 /*****************************************
 Class:CDisjointSet
 Description:并查集类(路径压缩)
-                Init -> 初始化
-				Find -> 向上查找父亲
-				Union -> 合并集合
+               Init -> 初始化
+               Find -> 向上查找父亲
+               Union -> 合并集合
 *****************************************/
 void CDisjointSet::Init(){
 	for(int i = 0; i <= _nMaxArray; i ++){
@@ -340,9 +340,9 @@ void CDisjointSet::Union(int nFather_A, int nFather_B){
 /*****************************************
 Class:CTreeArray : public CDataStruct
 Description:树状数组类
-                Lowbit
-				Add -> 修改偏移值(+n or -n)
-				Sum -> 求1~N区间和
+               Lowbit
+               Add -> 修改偏移值(+n or -n)
+               Sum -> 求1~N区间和
 *****************************************/
 int CTreeArray::Lowbit(int N){
 	return N&(-N);
@@ -365,9 +365,9 @@ int CTreeArray::Sum(int N){
 /*****************************************
 Class:CBinaryConversion
 Description:进制转换类(最高到16进制)
-                任意进制转10进制
-				10进制转任意进制
-				任意进制转任意进制m
+               任意进制转10进制
+               10进制转任意进制
+               任意进制转任意进制m
 *****************************************/
 int CBinaryConver::BinaryToTen(string strNum, int nCur_Binary){
 	int nLen = strNum.length();
