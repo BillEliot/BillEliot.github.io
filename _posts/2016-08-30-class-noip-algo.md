@@ -367,7 +367,7 @@ Class:CBinaryConversion
 Description:进制转换类(最高到16进制)
                任意进制转10进制
                10进制转任意进制
-               任意进制转任意进制m
+               任意进制转任意进制
 *****************************************/
 int CBinaryConver::BinaryToTen(string strNum, int nCur_Binary){
 	int nLen = strNum.length();
