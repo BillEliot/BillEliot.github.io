@@ -51,19 +51,18 @@ layout: default
                                <param name="wmode" value="opaque"></object>-->
                                
                                <div class="pull-right">
-                               {% if site.donate %}
-                                 {% include donate.html %}
-                               {% endif %}
+                                 {% if site.donate %}
+                                   {% include donate.html %}
+                                 {% endif %}
                                </div>
                                  
-                               <div class="span3 offset2">
+                               <!--<div class="span3 offset2">-->
                                  {% if site.bshare %}
                                   {% include share.html %}
                                  {% endif %}
-                               </div>
+                               <!--</div>-->
                              </div>
                              
-                             <br>
                              <br>
                              <!-- comment -->
                              {% include comments.html %}
