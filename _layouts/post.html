@@ -50,23 +50,20 @@ layout: default
                                <param name="AllowScriptAccess" value="always">
                                <param name="wmode" value="opaque"></object>-->
                                
-                               <div class="pull-right">
+                               <!--<div class="pull-right">-->
                                  {% if site.donate %}
                                    {% include donate.html %}
                                  {% endif %}
-                               </div>
+                               <!--</div>-->
                                  
-                               <!--<div class="span3 offset2">-->
+                               <div class="span3 offset2">
                                  {% if site.bshare %}
                                   {% include share.html %}
                                  {% endif %}
-                               <!--</div>-->
+                               </div>
                              </div>
-                             
-                             <br>
-                             <!-- comment -->
-                             {% include comments.html %}
                          </div>
+			     {% include comments.html %}
                      </div>
  
                  </div>
