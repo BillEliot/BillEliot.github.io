@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "【建模】高校排名"
+title: "【CODEVS 2799】高校排名"
 date: 2016-10-25
-desc: "【建模】高校排名"
+desc: "【CODEVS 2799】高校排名"
 keywords: "C++, Noip, Modeling"
 tags: [C++, Noip, Modeling]
 categories: [Noip]
