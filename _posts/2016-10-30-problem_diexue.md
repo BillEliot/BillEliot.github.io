@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "【建模】Vijos P1767 YYB喋血"
+title: "【Vijos 1767】YYB喋血"
 date: 2016-10-24
-desc: "【建模】Vijos P1767 YYB喋血"
+desc: "【Vijos 1767】YYB喋血"
 keywords: "C++, Noip, Modeling"
 categories: [Noip]
 ---
