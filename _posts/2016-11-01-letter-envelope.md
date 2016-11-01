@@ -7,6 +7,8 @@ categories: [Noip]
 bgp: "bg_text_11"
 ---
 
+**题目链接**：[数字串](http://codevs.cn/problem/1222/)  
+
 ## 定义
 
 `匹配` ： 一个边的集合，其中任意两条边都没有公共顶点.  
