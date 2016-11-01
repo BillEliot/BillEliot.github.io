@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "【题目】宿命的PSS 逆向Kruskal 并查集"
+title: "【Vijos 1579】宿命的PSS"
 date: 2016-10-25
-desc: "宿命的PSS 逆向Kruskal 并查集"
+desc: "【Vijos 1579】宿命的PSS"
 keywords: "C++, Noip, Kruskal"
 tags: [C++, Noip, Kruskal]
 categories: [Noip]
