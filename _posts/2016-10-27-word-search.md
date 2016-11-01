@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "【搜索】单词接龙"
+title: "【CODEVS 1018】单词接龙"
 date: 2016-10-27
-desc: "【搜索】单词接龙"
+desc: "【CODEVS 1018】单词接龙"
 keywords: "C++, Noip, Search"
 tags: [C++, Noip, Search]
 categories: [Noip]
