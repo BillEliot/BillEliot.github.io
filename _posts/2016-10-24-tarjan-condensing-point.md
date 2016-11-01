@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "【题目】爱在心中 Tarjan 缩点"
+title: "【Vijos 1626】爱在心中"
 date: 2016-10-23
-desc: "Tarjan 缩点"
+desc: "【Vijos 1626】爱在心中"
 keywords: "C++, Noip, Tarjan"
 tags: [C++, Noip, Tarjan]
 categories: [Noip]
