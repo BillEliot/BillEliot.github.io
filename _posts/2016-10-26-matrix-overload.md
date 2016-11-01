@@ -116,7 +116,7 @@ operator<运算符符号> 可以看做函数名。
 
 当运算符重载为类的友元函数时，由于没有隐含的this指针，因此操作数的个数没有变化，所有的操作数都必须通过函数的形参进行传递，函数的参数与操作数自左至右一一对应.
 
-重载时在函数前声明 ```friend``` ; ```<<``` ```>>```运算符必须用友元函数才能重载  
+重载时在函数前声明 `friend` ; `<<` `>>`运算符必须用友元函数才能重载  
 
 ### 实例
 
@@ -144,7 +144,7 @@ struct MATRIX{
 	long long M[MAX][MAX];
 	MATRIX() { memset(M, 0, sizeof(M)); }
 	
-	MATRIX operator* (MATRIX& A) {
+	MATRIX operator* (MATRIX& A) const {
 		MATRIX ANS;
 		for (int i = 1; i < MAX; i ++) {
 			for (int j = 1; j < MAX; j ++) {
@@ -209,7 +209,7 @@ public:
 	~MATRIX() {}
 	
 public:
-	MATRIX operator* (MATRIX& A) {
+	MATRIX operator* (MATRIX& A) const {
 		MATRIX ANS;
 		for (int i = 1; i < MAX; i ++) {
 			for (int j = 1; j < MAX; j ++) {
@@ -278,7 +278,7 @@ public:
 	friend MATRIX operator* (MATRIX&, MATRIX&);
 };
 
-MATRIX operator* (MATRIX& A, MATRIX& B) {
+MATRIX operator* (MATRIX& A, MATRIX& B) const {
 	MATRIX ANS;
 		for (int i = 1; i < MAX; i ++) {
 			for (int j = 1; j < MAX; j ++) {
