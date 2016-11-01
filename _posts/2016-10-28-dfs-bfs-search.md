@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "【搜索】密室逃脱"
+title: "【模拟赛】密室逃脱"
 date: 2016-10-27
-desc: "【搜索】密室逃脱"
+desc: "【模拟赛】密室逃脱"
 keywords: "C++, Noip, Search"
 tags: [C++, Noip, Search]
 categories: [Noip]
