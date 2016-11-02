@@ -4,7 +4,7 @@ title: "【CODEVS 1394】 数字串"
 date: 2016-11-02
 tags: [C++, Noip]
 categories: [Noip]
-bgp: "bg_text_20"
+bgp: "bg_text_23"
 ---
 
 **题目链接**：[数字串](http://codevs.cn/problem/1394/)  
