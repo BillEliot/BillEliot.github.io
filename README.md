@@ -2,7 +2,7 @@
 #### C++ -> Database
 #### Unity3D -> Mac
 
-评论管理后台(多说)：http://eliot.duoshuo.com/admin/
+评论管理后台(多说)：http://eliot.duoshuo.com/admin/  
 CNZZ流量统计：http://web.umeng.com/main.php?c=site&a=show
 
 ### 背景图片：
@@ -11,6 +11,7 @@ CNZZ流量统计：http://web.umeng.com/main.php?c=site&a=show
 * bg_text_6 .. bg_text_11 言叶之庭  
 * bg_text_12 .. bg_text_19 秒速5厘米  
 * bg_text_20 .. bg_text_23 天空之城
+* bg_text_24 .. bg_text_26 云之彼端，约定的地方
 
 ------------------------------------------------------------------------------------------------------------------------------
 # Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/Jack614/jalpc_jekyll_theme)
