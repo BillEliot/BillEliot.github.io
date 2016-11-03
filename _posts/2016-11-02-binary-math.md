@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "【模拟赛】 智障的小Q"
+title: "【智障模拟赛】 智障的小Q"
 date: 2016-11-02
 tags: [C++, Noip, Binary]
 categories: [Noip]
