@@ -143,7 +143,6 @@ int main() {
 	}
 	cout << nC_D << endl; 
 	
-	//额。。 玄学问题
 	ans += nC_D * 24;
 	ans *= 3600;
 	//计算时
