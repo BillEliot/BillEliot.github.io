@@ -41,7 +41,7 @@ bgp: "bg_text_17"
 `[L <= x <= R] = [1 <= x <= R] − [1 <= x <= L − 1]`，  
 => 求区间平均值小于等于某个数R的区间个数即可, 把所有数都减去R，  
 => 求区间和小于等于0的区间个数。  
-令 sum<sub>0</sub> = 0， sum<sub>i</sub> = ∑a<sub>k</sub>[1 <= k <= i](前缀和),  
+令 sum<sub>0</sub> = 0， sum<sub>i</sub> = ∑a<sub>k</sub>[1 <= k <= i] (前缀和),  
 => 求满足 sum<sub>i</sub> >= sum<sub>j</sub>(0 <= i < j <= n)的个数.  
 
 对于样例, 我们进行如下操作(结合下面代码看, 多看几遍就好)：  
@@ -56,7 +56,7 @@ A[] = 3 1 2 4
 申请数组X[]记录Z[]的rank的Pos(从大到小)　X[] = 5　2 1 3 4  
 　　　　　　　　　　　　　　　　　　　　　&nbsp;&nbsp;&nbsp;&nbsp;(2　1 0 0 0)  
 **从大到小排列是将Z[]中数按照 从大到小 依次进入树状数组**  
-基于排列后的Z[](2 1 0 0 0)进行遍历, 设立头指针pHead(1~n)和尾指针pTail(pHead~n), 当 *pTail = *pHead 时 pTail ++, 确定出区间 pHead~pTail-1 , 用树状数组维护这段区间(树状数组相当于标记作用)(求 sum<sub>j</sub> >= sum<sub>i</sub> ； **W[] 只是为了具象而设立, 真实为 sum**)：  
+基于排列后的Z[](2 1 0 0 0)进行遍历, 设立头指针pHead(1~n)和尾指针pTail(pHead~n), 当 *pTail = *pHead 时 pTail ++, 确定出区间 pHead~pTail-1 , 用树状数组维护这段区间(树状数组相当于标记作用)(求 sum<sub>j</sub> >= sum<sub>i</sub> ; **W[] 只是为了具象而设立, 真实为 sum**)：  
 　　　　　　　　　　　　　　　　　　　W[] = 0　0 0 0 0  
 使 ans += GetSum(X[pHead~pTail-1] - 1)  
 **一种类贪心的做法, 因为在Z[]中是降序排列并且标记到的树状数组, 所以在 pHead~pTail-1 区间中 未标记为0 标记为 1, 未标记数一定比标记数小, 就巧妙的求出了 sum<sub>j</sub> >= sum<sub>i</sub>**  
