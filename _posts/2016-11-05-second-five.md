@@ -50,11 +50,13 @@ bgp: "bg_text_19"
 我们都没有去抓住未来的力量，连自己都顾不上。
 踉踉跄跄不断奔跑不断受伤，也未能抓住想要的。
 最简单的愿望都未能实现的我们最后就是败给了现实。
+```
 
 <hr>
 
 ![alt text](/../static/img/blog/second_five/1.jpg)
 
+```
 作者：Alex Feng(知乎)
 链接：https://www.zhihu.com/question/32759798/answer/89388689
 
