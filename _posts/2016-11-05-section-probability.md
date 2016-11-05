@@ -55,7 +55,7 @@ A[] = 3 1 2 4
 将Z[]右移一位, 高位补0　　　　　　　　　&nbsp;&nbsp;Z[] = 0　1 0 0 2  
 申请数组X[]记录Z[]的rank的Pos(从大到小)　X[] = 5　2 1 3 4  
 　　　　　　　　　　　　　　　　　　　　　&nbsp;&nbsp;&nbsp;&nbsp;(2　1 0 0 0)  
-**从大到小排列是将Z[]中数按照 从大到小 依次进入树状数组**
+**从大到小排列是将Z[]中数按照 从大到小 依次进入树状数组**  
 基于排列后的Z[](2 1 0 0 0)进行遍历, 设立头指针pHead(1~n)和尾指针pTail(pHead~n), 当 *pTail = *pHead 时 pTail ++, 确定出区间 pHead~pTail-1 , 用树状数组维护这段区间(树状数组相当于标记作用)(求 sum<sub>j</sub> >= sum<sub>i</sub> ； **W[] 只是为了具象而设立, 真实为 sum**)：  
 　　　　　　　　　　　　　　　　　　　W[] = 0　0 0 0 0
 使 ans += GetSum(X[pHead~pTail-1] - 1)  
