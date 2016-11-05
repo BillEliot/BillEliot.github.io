@@ -57,9 +57,9 @@ A[] = 3 1 2 4
 　　　　　　　　　　　　　　　　　　　　　&nbsp;&nbsp;&nbsp;&nbsp;(2　1 0 0 0)  
 **从大到小排列是将Z[]中数按照 从大到小 依次进入树状数组**  
 基于排列后的Z[](2 1 0 0 0)进行遍历, 设立头指针pHead(1~n)和尾指针pTail(pHead~n), 当 *pTail = *pHead 时 pTail ++, 确定出区间 pHead~pTail-1 , 用树状数组维护这段区间(树状数组相当于标记作用)(求 sum<sub>j</sub> >= sum<sub>i</sub> ； **W[] 只是为了具象而设立, 真实为 sum**)：  
-　　　　　　　　　　　　　　　　　　　W[] = 0　0 0 0 0
+　　　　　　　　　　　　　　　　　　　W[] = 0　0 0 0 0  
 使 ans += GetSum(X[pHead~pTail-1] - 1)  
-**一种类贪心的做法, 因为在Z[]中是降序排列并且标记到的树状数组, 所以在 pHead~pTail-1 区间中 未标记为0 标记为 1, 未标记数一定比标记数小, 就巧妙的求出了 sum<sub>j</sub> >= sum<sub>i</sub>**
+**一种类贪心的做法, 因为在Z[]中是降序排列并且标记到的树状数组, 所以在 pHead~pTail-1 区间中 未标记为0 标记为 1, 未标记数一定比标记数小, 就巧妙的求出了 sum<sub>j</sub> >= sum<sub>i</sub>**  
 更新树状数组值 ： Add(X[pHead~pTail-1], 1);  
 **Z[]中是降序, 在树状数组中对应(当前rank在Z[]中Pos)标记**  
 每次 while 后的W[]：  
