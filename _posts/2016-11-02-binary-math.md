@@ -59,21 +59,7 @@ double k = -((double)nL_y / (double)nL_x);
 * 二分的正确写法
 
 如果二分写的不对的话， 那就哭去吧， 各种 多1 少1 。。。。。。  
-
-```c++
-int l = 0, r = n;
-while (l <= r) {
-	int nMid = (l + r) >> 1;
-	if (Judge(x, y, nMid)) {
-		l = nMid + 1;
-	}
-	else {
-		r = nMid - 1;
-	}
-}
-
-cout << l - 1 << endl;
-```
+具体见 [二分的正确写法](http://wjztop.tk/noip/2016/11/07/binary-algorithm.html)
 
 ## 代码
 
