@@ -28,7 +28,16 @@ bgp: "bg_text_26"
 * 图论  
 　+ 次短路  
 　+ 拓扑排序  
+　+ 二分图&匈牙利算法  
+　+ Tarjan  
+　+ 缩点  
+　+ 割点  
+　+ 桥  
+　+ 双连通分量  
+　+ 2-SAT问题  
+　+ LCA  
 * 动态规划
+* 其他
 
 <hr>
 
@@ -436,6 +445,111 @@ bool Graph::topological_sort() {
 }
 ```
 
+### 二分图&匈牙利算法
+
+```c++
+//左图 & 右图
+int n = 0, m = 0;
+int Belong[1001] = { 0 };
+int line[1001][1001] = { 0 };
+bool used[1001] = { false };
+
+bool find (int nPoint) {
+    for (int j = 1; j <= m; j++) {
+        if (line[nPoint][j] && !used[j]) {
+			used[j] = true;
+            if (Belong[j] == 0 || find(Belong[j])) {   
+                Belong[j] = nPoint;
+                return true;
+            }
+		}
+    }  
+    return false;  
+}
+
+for (int i = 1; i <= n; i++) {
+    memset(used, 0, sizeof(used));
+    if(find(i)) all += 1;
+}
+```
+
+另一种写法  
+
+```c++
+bool DFS(int nPoint) {
+	for (int i = head[nPoint]; i != 0; i = EDGE[i].nPre) {
+		int nNextPoint = EDGE[i].nTo;
+		if (Is[nNextPoint]) continue;
+		Is[nNextPoint] = true;
+		if (nLink[nNextPoint] == 0 || DFS(nLink[nNextPoint])) {
+			nLink[nNextPoint] = nPoint;
+			return true;
+		}
+	}
+	return false;
+}
+```
+
+### Tarjan
+
+```c++
+int DFN[MAX_N] = { 0 };
+int LOW[MAX_N] = { 0 };
+int nIndex = 0;
+stack<int> S;
+bitset<MAX_N> Is;
+inline void Tarjan(int nPoint) {
+	nIndex ++;
+	DFN[nPoint] = LOW[nPoint] = nIndex;
+	S.push(nPoint);
+	Is[nPoint] = 1;
+	for (int i = head[nPoint]; i != 0; i = EDGE[i].nPre) {
+		int nNextPoint = EDGE[i].nTo;
+		if (DFN[nNextPoint] == 0) {
+			Tarjan(nNextPoint);
+			LOW[nPoint] = min(LOW[nPoint], LOW[nNextPoint]);
+		}
+		else if (Is[nNextPoint] == 1){
+			LOW[nPoint] = min(LOW[nPoint], DFN[nNextPoint]);
+		}
+	}
+	//根据实际情况处理
+	if (DFN[nPoint] == LOW[nPoint]) {
+		int temp = 0;
+		CC ++;
+		do {
+			temp = S.top(); S.pop();
+			Arr[CC].push_back(temp);
+			Is[temp] = 0;
+		} while (temp != nPoint);
+		
+		nMax_size = max(nMax_size, (int)Arr[CC].size());
+	}
+}
+```
+
+### 缩点
+
+### 割点
+
+`定义`： 如果在 图G 中去掉一个顶点(同时去掉与该点相关联的所有边)后, 该图的连通分支数增加, 就称该顶点为G的`割点(cut-vertex)`.  
+
+* 对于一条搜索树上的边(u, v), 其中u是v的父节点, 若low[v] >= dfn[u], 则u为割点.  
+
+### 桥
+
+### 双连通分量
+
+### 2-SAT问题
+
+`模型`： 给定n对数, 每一对中必须且仅能取一个数, 某些数 i, j 之间有矛盾, 不能同时被取, 求可行性以及一种方案.  
+`思路`：  
+
+* 构图, 若取 i 后必须取 j 则 i, j 之间有边  
+* Tarjan 求强联通分量  
+* 若n对中有某一对在同一个强联通分量中, 则无解  
+* 输出解： 自底向上 拓扑排序, 每次找到能够取出的零出点i, 标记与i同一对的点不能取  
+
 ## 动态规划
 
 * 由已知推到未知  
@@ -464,4 +578,29 @@ bool Graph::topological_sort() {
 6. 对于无从下手的动态规划问题, 可以先用搜索的理解来找出转移方程, 实在无奈就果断选择记忆化搜索
 7. 对于空间过大的动态规划, 我们可以利用 `滚动数组` `离散化`等手段来优化
 8. 寻找问题的初始阶段(边界), 如fibnacio就是f(0) = f(1) = 1  
+
+## 其他
+
+### sort 多关键字排序
+
+对于多个关键字的结构体进行sort排序, 关键地进行 comp函数 的编写:  
+
+```c++
+struct STRUCT {
+    int Num_1;
+    int Num_2;
+    int Num_3;
+}
+
+//按照 Num_1 Num_2 Num_3 关键字的顺序从小到大排序, 当然也可以按照其他关键字排序, 比如 当 Num_1 相等的时候, Num_2 按照从大到小排序
+int comp(const STRUCT A, const STRUCT B) {
+    if (A.Num_1 < B.Num_1) return 1;
+    if (A.Num_1 > B.Num_1) return 0;
+    if (A.Num_2 < B.Num_2) return 1;
+    if (A.Num_2 > B.Num_2) return 0;
+    if (A.Num_3 < B.Num_3) return 1;
+    if (A.Num_3 > B.Num_3) return 0;
+    return 0;
+}
+```
 
