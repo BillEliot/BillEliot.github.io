@@ -1,5 +1,4 @@
 ### 重要提醒：修改博客类型时候只修改了Name，未修改类型，故提醒！
-#### C++ -> Database
 #### Unity3D -> Mac
 
 评论管理后台(多说)：http://eliot.duoshuo.com/admin/  
@@ -13,6 +12,10 @@ CNZZ流量统计：http://web.umeng.com/main.php?c=site&a=show
 * bg_text_20 .. bg_text_23 天空之城
 * bg_text_24 .. bg_text_26 云之彼端，约定的地方
 
+TEMP  
+图论：  
+http://blog.csdn.net/z_mendez/article/details/47035515  
+http://blog.csdn.net/z_mendez/article/details/47045127  
 ------------------------------------------------------------------------------------------------------------------------------
 # Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/Jack614/jalpc_jekyll_theme)
 
