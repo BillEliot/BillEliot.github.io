@@ -42,11 +42,11 @@ chmod o+x chmod o+x xampp-linux-x64-5.6.30-0-installer.run
 rm -f xampp-linux-x64-5.6.30-0-installer.run
 ```
 启动所有服务  
-*Starting MySQL Database...
-Starting ProFTPD...
-Checking syntax of configuration file
-/opt/lampp/proftpd/scripts/ctl.sh : proftpd started
-/opt/lampp/mysql/scripts/ctl.sh : mysql  started at port 3306*
+*Starting MySQL Database...  
+Starting ProFTPD...  
+Checking syntax of configuration file  
+/opt/lampp/proftpd/scripts/ctl.sh : proftpd started  
+/opt/lampp/mysql/scripts/ctl.sh : mysql  started at port 3306*  
 
 > 使用http://localhost 或 http://127.0.0.1 测试服务是否启动
 
@@ -68,14 +68,16 @@ cd /opt/lampp/htdocs
 vim config/config.inc.php
 ```
 
-*$_DVWA = array();
-$_DVWA[ 'db_server' ]   = '127.0.0.1';
-$_DVWA[ 'db_database' ] = 'dvwa';
-$_DVWA[ 'db_user' ]     = 'root';
-$_DVWA[ 'db_password' ] = ''*
+*$_DVWA = array();  
+$_DVWA[ 'db_server' ]   = '127.0.0.1';  
+$_DVWA[ 'db_database' ] = 'dvwa';  
+$_DVWA[ 'db_user' ]     = 'root';  
+$_DVWA[ 'db_password' ] = ''*  
 
 http://localhost 开始创建数据库
 
 > 默认账户密码 admin password
+
+> 进入DVWA Security选项卡，允许使用PHPIDS，调节安全等级`Low`,`Medium`,`High`,`Impossible`
 
 **至此，DVWA搭建完毕**
