@@ -53,9 +53,9 @@ project:
     url: ''
     img: 'static/img/landing/Linux.png'
   Rsser:
-    name: 'Unity3D'
+    name: 'OGRE'
     url: ''
-    img: 'static/img/landing/Unity3D.png'
+    img: 'static/img/landing/OGRE.png'
 
 # blog index
 index:
