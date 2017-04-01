@@ -412,7 +412,7 @@ permalink: /
 </section>
 
 <!-- Game Section -->
-<section id="game" class="project gray-section features" style="background-image:url('static/img/landing/BackGround_Read.jpg');">
+<section id="project" class="project gray-section features" style="background-image:url('static/img/landing/BackGround_Read.jpg');">
     <div class="container" id="i18_projects">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
@@ -425,7 +425,7 @@ permalink: /
                 <div class="team-member">
                     <img src="/static/img/landing/game/GTA5.jpg" class="img-responsive img-circle img-small" alt="">
                     <h4>GTA5</h4>
-                    <p><span data-i18n="projects.rsser"></span></p>
+                    <p><span data-i18n="projects.saplatform"></span></p>
                     <ul class="list-inline">
                         <li>
                             <a class="github-button">RockStar</a>
@@ -433,67 +433,89 @@ permalink: /
                     </ul>
                 </div>
             </div>
-         </div>
+
+            <div class="col-sm-6 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{ site.project.jalpc.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4>{{ site.project.jalpc.name }}</h4>
+                    <p><span data-i18n="projects.jalpc">Jalpc is a simple, beautiful and swift theme for Jekyll. It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.</span></p>
+                    <ul class="list-inline">
+                        <!--<li>
+                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.jalpc.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.jalpc.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft">
+                <div class="team-member">
+                    <img src="{{ site.project.angularjs.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4>{{ site.project.angularjs.name }}</h4>
+                    <p><span data-i18n="projects.angularjs">Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.</span></p>
+                    <ul class="list-inline">
+                        <!--<li>
+                            <a class="github-button" href="{{ site.project.angularjs.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.angularjs.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.angularjs.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.angularjs.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.angularjs.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.angularjs.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-6 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{ site.project.Rsser.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4>{{ site.project.Rsser.name }}</h4>
+                    <p><span data-i18n="projects.rsser">Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually.</span></p>
+                    <ul class="list-inline">
+                        <!--<li>
+                            <a class="github-button" href="{{ site.project.Rsser.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.Rsser.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.Rsser.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.Rsser.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.Rsser.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.Rsser.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="row">
-            <div class="col-sm-6 wow fadeInLeft">
-                <div class="team-member">
-                    <img src="/static/img/landing/game/WD_1.jpg" class="img-responsive img-circle img-small" alt="">
-                    <h4>Watch Dogs</h4>
-                    <p><span data-i18n="projects.rsser"></span></p>
-                    <ul class="list-inline">
-                        <li>
-                            <a class="github-button">Ubisoft</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-     </div>
-    
-     <div class="row">
-            <div class="col-sm-6 wow fadeInLeft">
-                <div class="team-member">
-                    <img src="/static/img/landing/game/WD_2.jpg" class="img-responsive img-circle img-small" alt="">
-                    <h4>Watch Dogs2</h4>
-                    <ul class="list-inline">
-                        <li>
-                            <a class="github-button">Ubisoft</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-     </div>
-     
-     <div class="row">
-            <div class="col-sm-6 wow fadeInLeft">
-                <div class="team-member">
-                    <img src="/static/img/landing/game/Witcher.jpg" class="img-responsive img-circle img-small" alt="">
-                    <h4>The Witcher</h4>
-                    <ul class="list-inline">
-                        <li>
-                            <a class="github-button">WB Games and Spike Chunsoft</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-     </div>
-     
-     <div class="row">
-            <div class="col-sm-6 wow fadeInLeft">
-                <div class="team-member">
-                    <img src="/static/img/landing/game/WOT.jpg" class="img-responsive img-circle img-small" alt="">
-                    <h4>World of Tanks</h4>
-                    <ul class="list-inline">
-                        <li>
-                            <a class="github-button">Wargaming</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-     </div>
-    
-     
+    <br>
 </section>
 <!-- Game Section -->
     
