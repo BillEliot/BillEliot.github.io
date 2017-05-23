@@ -66,7 +66,7 @@ index:
   web: 'WEB'
   cpp: 'C/C++'
   noip: 'NOIP'
-  gaem: 'Game'
+  game: 'Game'
   life: 'Life'
 
 # donate
