@@ -54,9 +54,9 @@ project:
     url: ''
     img: 'static/img/landing/Linux.png'
   Rsser:
-    name: 'OGRE'
+    name: 'Unreal'
     url: ''
-    img: 'static/img/landing/OGRE.png'
+    img: 'static/img/landing/Unreal.jpg'
 
 # blog index
 index:
