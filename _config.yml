@@ -56,7 +56,7 @@ project:
   Rsser:
     name: 'Unreal'
     url: ''
-    img: 'static/img/landing/Unreal.jpg'
+    img: 'static/img/landing/Unreal.png'
 
 # blog index
 index:
