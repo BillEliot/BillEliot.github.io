@@ -9,6 +9,8 @@ bgp: "bg_text_9"
 
 ## 随写随记, 易错点, 注意事项, 重要笔记
 
+---
+
 **写多人游戏(联机)的时候, 要在 `DefaultEngine.ini` 中定义 :**  
 
 > LAN
@@ -37,5 +39,9 @@ NetConnectionClassName="OnlineSubsystemSteam.SteamNetConnection"
 ```
 [更多参考Unreal官方文档](https://docs.unrealengine.com/latest/CHN/Programming/Online/Steam/index.html)
 
+---
 
 * CreateSession 写在GameInstance蓝图中才会有效果
+
+---
+
