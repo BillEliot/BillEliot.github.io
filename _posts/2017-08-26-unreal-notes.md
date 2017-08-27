@@ -41,7 +41,8 @@ NetConnectionClassName="OnlineSubsystemSteam.SteamNetConnection"
 
 ---
 
-**设置第三人称Character Blueprint的几点注意**
+**设置第三人称Character Blueprint的几点注意**  
+
 1.添加Spring Arm Component后Attach摄像机, 并勾选Use Pawn Control Rotation   
 2.取消勾选Pawn下的Use Controller Rotation Yaw   
 3.勾选CharacterMovementComponent中Rotation Settings下的Orient Rotation to Movement   
