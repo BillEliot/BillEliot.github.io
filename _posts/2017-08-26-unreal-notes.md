@@ -41,4 +41,12 @@ NetConnectionClassName="OnlineSubsystemSteam.SteamNetConnection"
 
 ---
 
+**设置第三人称Character Blueprint的几点注意**
+1.添加Spring Arm Component, 并勾选Use Pawn Control Rotation   
+2.取消勾选Pawn下的Use Controller Rotation Yaw   
+3.勾选CharacterMovementComponent中Rotation Settings下的Orient Rotation to Movement   
+
+---
+
 * CreateSession 写在GameInstance蓝图中才会有效果
+* 设置GameMode后, PlayerStart可能不会加载默认的Character, 重启编辑器就好了
