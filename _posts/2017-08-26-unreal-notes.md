@@ -51,3 +51,4 @@ NetConnectionClassName="OnlineSubsystemSteam.SteamNetConnection"
 
 * CreateSession 写在GameInstance蓝图中才会有效果
 * 设置GameMode后, PlayerStart可能不会加载默认的Character, 重启编辑器就好了
+* 需要碰撞的Actor蓝图里, 根组件不要设置为SceneComponent, 可以设置为某个Collision(SphereCollision, BoxCollision)
