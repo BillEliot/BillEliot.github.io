@@ -53,3 +53,4 @@ NetConnectionClassName="OnlineSubsystemSteam.SteamNetConnection"
 * 设置GameMode后, PlayerStart可能不会加载默认的Character, 重启编辑器就好了
 * 需要碰撞的Actor蓝图里, 根组件不要设置为SceneComponent, 可以设置为某个Collision(SphereCollision, BoxCollision)
 * 联机中, 要获取联机的Controller, 可以尝试将Get Player Controller换成Get Controller
+* Lighting Build failed. Swarm Failed to kick off. 光照构建失败, 可能是Mesh或者Material存在重名(极大可能是由另外一个Project导出资源到当前Project造成的)
