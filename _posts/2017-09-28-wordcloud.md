@@ -9,7 +9,7 @@ bgp: "bg_text_5"
 
 ## 词云
 
-![WordCloud](/../static/img/blog/word cloud/logo.png)  
+![WordCloud]('/../static/img/blog/word cloud/logo.png')  
 
 > Python中使用wordcloud库轻松制作词云
 
