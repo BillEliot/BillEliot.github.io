@@ -4,7 +4,7 @@ title: "【整理】中医基础理论"
 date: 2017-11-06
 tags: [Chinese Medicine, Basic Theory]
 categories: [Life]
-bgp: "bg_text_25"
+bgp: "bg_text_24"
 ---
 
 # 绪论
@@ -75,9 +75,9 @@ bgp: "bg_text_25"
 
 ||左|右|
 |:--:|:--:|:--:|
-|寸   |心／小肠   |肺／大肠|
-|关   |肝／胆   |脾／胃|
-|尺   |肾／膀胱   |肾／膀胱|
+|寸&emsp;&emsp;|心／小肠&emsp;&emsp;|肺／大肠|
+|关&emsp;&emsp;|肝／胆&emsp;&emsp;|脾／胃|
+|尺&emsp;&emsp;|肾／膀胱&emsp;&emsp;|肾／膀胱|
 
 > 《针灸甲乙经》
 
